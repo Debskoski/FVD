@@ -19,9 +19,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Debora Prophitius
 
   #### Je startniveau:
-  Zwart
+  blauw
   #### Je focus:
-  Surface plane
+  responsive
+ 
  
 </details>
 
@@ -39,11 +40,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   #### Screenshot(s) van de eerste pagina (small screen): 
 
  Hoofpagina
-  <img src="readme-images/feastables.png" width="375px" alt="Dit is de hoofpagina van de website, hierin kan je de artikelen vinden etc.">
+  <img src="readme-images/eerste.png" width="375px" alt="Dit is de hoofpagina van de website, hierin kan je de artikelen vinden etc.">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Artikel 
-  <img src="readme-images/tweedepagina.png" width="375px" alt="kan je dingen selecteren en meer informatie vinden over de chocolade reep">
+  <img src="readme-images/tweede.png
+  " width="375px" alt="hier kan je het artikel lezen">
  
 </details>
 
