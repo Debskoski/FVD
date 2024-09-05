@@ -35,16 +35,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  https://www.girlscene.nl
-https://www.girlscene.nl/eotb-yara-nour-aangehouden-schiphol
+ https://feastables.com/
   #### Screenshot(s) van de eerste pagina (small screen): 
 
  Hoofpagina
-  <img src="readme-images/eerste.png" width="375px" alt="Dit is de hoofpagina van de website, hierin kan je artikelen vinden etc.">
+  <img src="readme-images/feastables.png" width="375px" alt="Dit is de hoofpagina van de website, hierin kan je de artikelen vinden etc.">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Artikel 
-  <img src="readme-images/tweede.png" width="375px" alt="Op deze pagina kan je een artikel lezen">
+  <img src="readme-images/tweedepagina.png" width="375px" alt="kan je dingen selecteren en meer informatie vinden over de chocolade reep">
  
 </details>
 
