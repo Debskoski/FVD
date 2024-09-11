@@ -69,13 +69,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/schets.png.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/1.jpg.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/2.jpg.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -89,7 +89,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik had bij het coderen van mijn html enkele problemen, ik wist bijvoorbeeld niet wt mijn H1 was aangezien die niet heel duidelijk was, ook had ik in de eerste instantie alles alleen in een h2 h3 en een p, toen leerde ik van een klasgenoot dat het beter is om alles te listen. Ik heb toen geleerd dat je kan referen naar dat het een artikel is door de tag <article> te gebruiken, nadat ik dat heb geleerd is mijn html code veel meer overzichtelijk geworden. Het enige wat ik nog steeds niet weet is wat ik als H1 moet gebruiken aangezien je voor een goede code wel een H1 nodig hebt. 
 
 
   ### Agenda voor meeting
