@@ -57,7 +57,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+  Het is makkelijk om met voice chat te navigeren over de website via de computer, alleen via de telefoon als het scherm kleiner word is het wat lastiger, zinnen worden dan in zijn geheel niet afgemaakt, wat ook enorm belangrijk is is de sections zodat er goed te horen is wanneer er een nieuw deel begint op de website
+ 
 
 </details>
 
