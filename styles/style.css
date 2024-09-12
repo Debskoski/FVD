@@ -1,31 +1,143 @@
-/**************/
-/* CSS REMEDY */
-/**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
-}
-
-
-
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+    --letterkleur: #000; /* Letterkleur */
+    --h2kleur: #efbebe; /* Kleur voor borders om h2 */
+    --mainachtergrondkleur: #f6f6f6; /* Achtergrondkleur */
+    --tweedeachtergrondkleur: #fed6d6; /* Tweede achtergrondkleur */
+    --wit: #fff; /* Witte kleur */
+    --grijs: #6e6d6d;
+    --zwart: #000; /* Zwart als tekstkleur */
+}
+  
+body {
+    background-color: var(--mainachtergrondkleur);
 }
 
+header {
+    background-color: var(--wit);
+    padding: 1em 4.5em;
+    display: flex;
+    align-items: center; /* Centreert de header items verticaal */
+    justify-content: space-between;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 20; /* Zorgt ervoor dat de header boven andere elementen staat */
+}
 
+nav {
+    display: flex;
+    align-items: center; /* Centreert nav items verticaal in de nav */
+    justify-content: center; /* Centreert nav items horizontaal in de nav */
+    width: 100%;
+    background-color: var(--wit);
+    position: relative;
+    z-index: 15; /* Zorgt ervoor dat de nav boven andere content staat */
+}
 
+/* Reset voor marges en paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Stijlen voor het logo */
+nav img {
+    height: 2.5em; /* Pas de hoogte van het logo aan naar wens */
+    margin-right: 2em; /* Ruimte tussen logo en navigatie-items */
+}
 
-/****************/
-/* JOUW STYLING */
-/****************/
+/* Stijlen voor de navigatie links */
+nav a {
+    color: var(--letterkleur);
+    text-decoration: none;
+    font-size: 0.7em;
+    transition: color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 550;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center; /* Zorgt ervoor dat de linkinhoud verticaal gecentreerd is */
+    margin: 0 1em; /* Ruimte tussen navigatie-items bij desktop */
+}
 
-/* jouw code */
+/* Hamburgerknop */
+nav button {
+    position: absolute;
+    top: 0.5em; /* Verhoog deze waarde om de knop verder naar boven te verplaatsen */
+    right: 1em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+    display: block;
+    z-index: 30; /* Zorgt dat de knop boven het menu en de nav staat */
+}
 
+/* Hamburgerknop afbeelding */
+nav button img {
+    width: 1em; /* Breedte van de hamburgerknop */
+    height: auto;
+}
+
+/* Verborgen menu standaard */
+nav ul {
+    list-style: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--wit);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%); /* Menu begint boven het scherm */
+    transition: transform 0.3s ease-in-out;
+    z-index: 10; /* Zorgt ervoor dat het menu onder de nav en hamburgerknop staat */
+}
+
+/* Menu-items */
+nav ul li {
+    margin: 1.5em 0; /* Ruimte tussen de menu-items */
+}
+
+/* Menu-item links */
+nav ul li a {
+    text-decoration: none;
+    color: var(--zwart); /* Pas deze kleur aan naar je gewenste tekstkleur */
+}
+
+/* Wanneer het menu actief is (via class 'active') */
+nav.active ul {
+    transform: translateY(0); /* Menu slidet naar beneden */
+}
+
+/* Desktopstijl: bij grotere schermen */
+@media (min-width: 769px) {
+    /* Menu wordt statisch, horizontaal en zichtbaar */
+    nav ul {
+        position: static;
+        transform: none; /* Verwijdert de animatie */
+        height: auto;
+        flex-direction: row; /* Horizontale weergave van de menu-items */
+        justify-content: center; /* Menu-items worden gecentreerd */
+        padding: 0;
+    }
+
+    /* Verberg de hamburgerknop */
+    nav button {
+        display: none;
+    }
+
+    /* Menu-items inline bij desktop */
+    nav ul li {
+        margin: 0 1em; /* Ruimte tussen de items horizontaal */
+    }
+}
+
+/* Hover effect voor de navigatie links */
+nav a:hover {
+    color: var(--h2kleur); /* Kleur van de tekst bij hover */
+}

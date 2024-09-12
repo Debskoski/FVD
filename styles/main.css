@@ -1,0 +1,5 @@
+img {
+    width: auto;  /* Breedte van de afbeelding */
+    height: 10em; /* Hoogte van de afbeelding */
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding netjes binnen de container past */
+}
