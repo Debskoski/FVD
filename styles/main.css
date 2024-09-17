@@ -1,5 +1,379 @@
-img {
-    width: auto;  /* Breedte van de afbeelding */
-    height: 10em; /* Hoogte van de afbeelding */
-    object-fit: cover; /* Zorgt ervoor dat de afbeelding netjes binnen de container past */
+:root {
+    --letterkleur: #000; /* Letterkleur */
+    --h2kleur: #efbebe; /* Kleur voor borders om h2 */
+    --mainachtergrondkleur: #f6f6f6; /* Achtergrondkleur */
+    --tweedeachtergrondkleur: #fed6d6; /* Tweede achtergrondkleur */
+    --wit: #fff; /* Witte kleur */
+    --grijs: #6e6d6d;
+    --zwart: #000; /* Zwart als tekstkleur */
+    --headingeten: #FBE59A;
+    --achtergrondeten: #FEF8E1;
+    --paars: #E4CCE4;
+    --donkerpaars: #F8EAF8;
+    --roze: #FEF2F2;
+}
+
+/* Basis styling voor de eerste section */
+section:nth-of-type(1) {
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+}
+
+/* Styling voor afbeeldingen in de eerste section */
+section:nth-of-type(1) img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* Styling voor de overlay die verschijnt bij hoveren */
+section:nth-of-type(1)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+/* Overlay zichtbaar bij hoveren */
+section:nth-of-type(1):hover::before {
+    opacity: 1;
+}
+
+/* Zorg ervoor dat de tekst boven de overlay staat */
+section:nth-of-type(1) a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    z-index: 2;
+}
+
+/* Styling voor de h3-elementen binnen de eerste section */
+section:nth-of-type(1) h3 {
+    background-color: var(--tweedeachtergrondkleur);
+    color: var(--letterkleur);
+    padding: 10px;
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    top: 150px;
+    left: 10px;
+    z-index: 3;
+    font-size: 0.7em;
+    box-sizing: border-box;
+}
+
+/* Zorg ervoor dat de p-elementen onder de h3 staan */
+section:nth-of-type(1) p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: var(--wit);
+    z-index: 2;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* Verhoog de lettergrootte bij grotere schermen */
+@media (min-width: 768px) {
+    section:nth-of-type(1) h3 {
+        font-size: 1.8em;
+        top: 20px;
+    }
+
+    section:nth-of-type(1) p {
+        font-size: 1.5em;
+        bottom: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    section:nth-of-type(1) h3 {
+        font-size: 2.2em;
+        top: 30px;
+    }
+
+    section:nth-of-type(1) p {
+        font-size: 1.8em;
+        bottom: 30px;
+    }
+}
+
+/* Flexbox instellingen voor de artikelen in een container */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Zorg ervoor dat artikelen onder elkaar staan op kleinere schermen */
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+    }
+}
+
+/* Zorg ervoor dat artikelen naast elkaar staan op grotere schermen */
+@media (min-width: 769px) {
+    section {
+        flex-direction: row;
+    }
+}
+
+/* Stijl voor alle artikelen behalve de eerste section */
+section:nth-of-type(n+2) {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+/* Kleine afbeelding aan de linkerzijde van de sectie */
+section:nth-of-type(n+2)::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: url('path_to_small_image.png') no-repeat center center;
+    background-size: cover;
+    margin-right: 1rem;
+}
+
+/* Vergroten van foto's bij grotere schermen */
+@media (min-width: 768px) {
+    section:nth-of-type(n+2)::before {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (min-width: 1024px) {
+    section:nth-of-type(n+2)::before {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Knoppen zonder opmaak met border */
+button {
+    border: 1px solid var(--letterkleur);
+    background: none;
+    color: var(--letterkleur);
+    font: inherit;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px; 
+    margin: 5px; 
+}
+
+button:hover {
+    background-color: var(--h2kleur);
+    border: none;
+}
+
+/* Stijl voor de eerste h2 in de pagina */
+h2:nth-of-type(1) {
+    background-color: var(--tweedeachtergrondkleur);
+    color: var(--letterkleur);
+    border-top: 2px solid var(--zwart); /* Bovenrand */
+    border-bottom: 2px solid var(--zwart); /* Onderkantrand */
+    border-left: 1px solid var(--zwart); /* Linkerrand smaller */
+    border-right: 1px solid var(--zwart); /* Rechterrand smaller */
+    padding: 10px; 
+    display: inline-block; /* Zorg ervoor dat de border alleen rondom de tekst zit */
+    text-align: center; 
+    text-decoration: none;
+    font-size: 0.7em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 550;
+    letter-spacing: 0.1em;
+}
+
+/* Styling voor specifieke sections */
+section:nth-of-type(4) {
+    background-color: var(--donkerpaars);
+}
+
+section:nth-of-type(6) {
+    background-color: var(--achtergrondeten);
+}
+
+
+section:nth-of-type(2) a {
+        display: grid;
+        grid-template-columns: 6em 1fr;
+        grid-template-rows: max-content 1fr;
+        gap: 0 1em;
+        padding: 1em;
+
+}
+
+section:nth-of-type(2) a h3 {
+    background-color: var(--tweedeachtergrondkleur);
+    color: var(--letterkleur);
+    padding: 10px;
+    font-size: 1em; /* bah */
+    margin:0;
+    
+}
+
+section:nth-of-type(2) a img {
+    width: 100%;
+    height: auto;
+    display: block;
+grid-column-start: 1;
+grid-row-start: 1;
+grid-row-end: 3;
+}
+
+section:nth-of-type(3) a {
+    display: grid;
+    grid-template-columns: 6em 1fr;
+    grid-template-rows: max-content 1fr;
+    gap: 0 1em;
+    padding: 1em;
+
+}
+
+section:nth-of-type(3) a h3 {
+background-color: var(--tweedeachtergrondkleur);
+color: var(--letterkleur);
+padding: 10px;
+font-size: 1em; /* bah */
+margin:0;
+
+}
+
+section:nth-of-type(3) a img {
+width: 100%;
+height: auto;
+display: block;
+grid-column-start: 1;
+grid-row-start: 1;
+grid-row-end: 3;
+}
+
+section:nth-of-type(4) a {
+    display: grid;
+    grid-template-columns: 6em 1fr;
+    grid-template-rows: max-content 1fr;
+    gap: 0 1em;
+    padding: 1em;
+
+}
+
+section:nth-of-type(4) a h3 {
+background-color: var(--tweedeachtergrondkleur);
+color: var(--letterkleur);
+padding: 10px;
+font-size: 1em; /* bah */
+margin:0;
+
+}
+
+section:nth-of-type(4) a img {
+width: 100%;
+height: auto;
+display: block;
+grid-column-start: 1;
+grid-row-start: 1;
+grid-row-end: 3;
+}
+
+section:nth-of-type(5) a {
+    display: grid;
+    grid-template-columns: 6em 1fr;
+    grid-template-rows: max-content 1fr;
+    gap: 0 1em;
+    padding: 1em;
+
+}
+
+section:nth-of-type(5) a h3 {
+background-color: var(--tweedeachtergrondkleur);
+color: var(--letterkleur);
+padding: 10px;
+font-size: 1em; /* bah */
+margin:0;
+
+}
+
+section:nth-of-type(5) a img {
+width: 100%;
+height: auto;
+display: block;
+grid-column-start: 1;
+grid-row-start: 1;
+grid-row-end: 3;
+}
+
+
+
+    
+section:nth-of-type(6) a {
+    display: grid;
+    grid-template-columns: 6em 1fr;
+    grid-template-rows: max-content 1fr;
+    gap: 0 1em;
+    padding: 1em;
+
+}
+
+section:nth-of-type(6) a h3 {
+background-color: var(--tweedeachtergrondkleur);
+color: var(--letterkleur);
+padding: 10px;
+font-size: 1em; /* bah */
+margin:0;
+
+}
+
+section:nth-of-type(6) a img {
+width: 100%;
+height: auto;
+display: block;
+grid-column-start: 1;
+grid-row-start: 1;
+grid-row-end: 3;
+}
+
+section:nth-of-type(7) a {
+    display: grid;
+    grid-template-columns: 6em 1fr;
+    grid-template-rows: max-content 1fr;
+    gap: 0 1em;
+    padding: 1em;
+
+}
+
+section:nth-of-type(7) a h3 {
+background-color: var(--tweedeachtergrondkleur);
+color: var(--letterkleur);
+padding: 10px;
+font-size: 1em; /* bah */
+margin:0;
+
+}
+
+section:nth-of-type(7) a img {
+width: 100%;
+height: auto;
+display: block;
+grid-column-start: 1;
+grid-row-start: 1;
+grid-row-end: 3;
 }

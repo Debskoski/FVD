@@ -7,6 +7,15 @@
     --grijs: #6e6d6d;
     --zwart: #000; /* Zwart als tekstkleur */
 }
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+  }
   
 body {
     background-color: var(--mainachtergrondkleur);
@@ -16,7 +25,7 @@ header {
     background-color: var(--wit);
     padding: 1em 4.5em;
     display: flex;
-    align-items: center; /* Centreert de header items verticaal */
+    align-items: center;
     justify-content: space-between;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     position: sticky;
@@ -27,7 +36,6 @@ header {
 nav {
     display: flex;
     align-items: center; /* Centreert nav items verticaal in de nav */
-    justify-content: center; /* Centreert nav items horizontaal in de nav */
     width: 100%;
     background-color: var(--wit);
     position: relative;
@@ -45,6 +53,7 @@ nav {
 nav img {
     height: 2.5em; /* Pas de hoogte van het logo aan naar wens */
     margin-right: 2em; /* Ruimte tussen logo en navigatie-items */
+	z-index: 4;
 }
 
 /* Stijlen voor de navigatie links */
@@ -56,22 +65,27 @@ nav a {
     font-family: 'Roboto', sans-serif;
     font-weight: 550;
     letter-spacing: 0.1em;
-    display: flex;
-    align-items: center; /* Zorgt ervoor dat de linkinhoud verticaal gecentreerd is */
-    margin: 0 1em; /* Ruimte tussen navigatie-items bij desktop */
 }
 
+/* Hamburgerknop */
 /* Hamburgerknop */
 nav button {
     position: absolute;
     top: 0.5em; /* Verhoog deze waarde om de knop verder naar boven te verplaatsen */
-    right: 1em;
+    right: 0.5em;
     background: none;
     border: none;
     cursor: pointer;
     font-size: 2em;
     display: block;
     z-index: 30; /* Zorgt dat de knop boven het menu en de nav staat */
+}
+
+/* Verwijder hover-effect voor de button */
+nav button:hover {
+    color: inherit; /* Zorgt ervoor dat er geen kleurverandering is bij hover */
+    background: none; /* Geen achtergrondverandering */
+    cursor: pointer; /* Houdt de pointer als muisicoon */
 }
 
 /* Hamburgerknop afbeelding */
@@ -103,7 +117,6 @@ nav ul li {
     margin: 1.5em 0; /* Ruimte tussen de menu-items */
 }
 
-/* Menu-item links */
 nav ul li a {
     text-decoration: none;
     color: var(--zwart); /* Pas deze kleur aan naar je gewenste tekstkleur */
@@ -122,13 +135,14 @@ nav.active ul {
         transform: none; /* Verwijdert de animatie */
         height: auto;
         flex-direction: row; /* Horizontale weergave van de menu-items */
-        justify-content: center; /* Menu-items worden gecentreerd */
+        justify-content: flex-end; /* Menu-items worden naar rechts uitgelijnd */
         padding: 0;
     }
 
     /* Verberg de hamburgerknop */
     nav button {
         display: none;
+		
     }
 
     /* Menu-items inline bij desktop */
@@ -137,7 +151,71 @@ nav.active ul {
     }
 }
 
-/* Hover effect voor de navigatie links */
+
 nav a:hover {
     color: var(--h2kleur); /* Kleur van de tekst bij hover */
 }
+
+
+/* Algemene styling voor de footer */
+footer {
+    background-color: #f8f8f8; /* Lichtgrijze achtergrondkleur */
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd; /* Lichtgrijze bovenrand */
+    font-family: Arial, sans-serif;
+}
+
+/* Logo stijl */
+footer img {
+    max-width: 100px; /* Maximaal 100 pixels breed */
+    height: auto;
+    margin: 10px 0;
+}
+
+/* Stijl voor de navigatielijst */
+footer ul {
+    list-style: none; /* Verwijder opsommingstekens */
+    padding: 0;
+    margin: 10px 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #333; /* Donkergrijze tekstkleur */
+    font-weight: bold;
+}
+
+footer ul li a:hover {
+    color: #007bff; /* Blauwe kleur bij hover */
+}
+
+/* Stijl voor de sociale media iconen */
+footer a img {
+    max-width: 30px; /* Maximaal 30 pixels breed */
+    height: auto;
+    margin: 0 5px;
+}
+
+/* Stijl voor de copyright melding */
+footer p {
+    font-size: 14px;
+    color: #666; /* Lichtgrijze tekstkleur */
+    margin: 10px 0 0;
+}
+
+h3 {
+    color: var(--letterkleur);
+    text-decoration: none;
+    font-size: 0.7em;
+    transition: color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 550;
+    letter-spacing: 0.1em;
+}
+

@@ -107,10 +107,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - op font en plaatjes maten een clamp zetten
+  - aspect-ratio voor verhouding en breedte
+  -  text-transform:uppercase;
+  - engelse woorden moeten met lang"en" ervoor
+  - icoontje bovenin van website aanpassen
+  - naam author toevoegen
+  - Bij het logo uitleggen op welke pagina je bent in plaats van het logo te beschrijven
+  -H1 mag op het logo van de website 
 
 </details>
 
@@ -187,10 +191,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  
 
 </details>
 
