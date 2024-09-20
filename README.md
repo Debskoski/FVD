@@ -44,8 +44,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Artikel 
-  <img src="readme-images/tweede.png
-  " width="375px" alt="hier kan je het artikel lezen">
+  <img src="readme-images/tweede.png" width="375px" alt="hier kan je het artikel lezen">
  
 </details>
 
@@ -141,13 +140,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   | ...            | ...                | ...          | ...              |
 
 
+
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+ -Overal em ipv pixel
+ -texten downoaden en allemaal aanpassen
+ -voor dark modus de foto aanpassen naar dark modus
 
 </details>
 

@@ -47,13 +47,14 @@ nav {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    position: relative;
 }
 
 /* Stijlen voor het logo */
 nav img {
     height: 2.5em; /* Pas de hoogte van het logo aan naar wens */
     margin-right: 2em; /* Ruimte tussen logo en navigatie-items */
-	z-index: 4;
+	z-index: 99;
 }
 
 /* Stijlen voor de navigatie links */

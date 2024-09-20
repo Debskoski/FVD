@@ -85,6 +85,7 @@ section:nth-of-type(1) img {
     height: auto;
     display: block;
     transition: opacity 0.3s ease;
+    margin-bottom: 1em;
 }
 
 /* Plaats de tekst boven de afbeelding */
@@ -207,6 +208,7 @@ h2, h3 {
     text-transform: uppercase;
     box-sizing: border-box; /* Zorgt ervoor dat de border om de tekst heen zit zonder extra ruimte */
     margin: 0; /* Verwijdert eventuele extra marges */
+    width: fit-content;
 }
 
 
@@ -247,6 +249,7 @@ section:nth-of-type(7) a h3 {
     padding: 4px 8px ;
     font-size: 1em;
     
+    
 }
 
 section:nth-of-type(2) a img,
@@ -274,4 +277,22 @@ text-align: left;
 a {
     text-decoration: none;
     color: var(--zwart);
+}
+
+h2{ margin-top: 3em;
+    margin-left: 35%;
+    
+}
+
+section:nth-of-type(4) h2 {
+background-color: var(--paars);
+}
+
+section:nth-of-type(6) h2 {
+    background-color: var(--headingeten);
+
+}
+
+image :hover {
+    color:hotpink;
 }
