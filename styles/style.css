@@ -71,8 +71,8 @@ nav a {
 /* Hamburgerknop */
 nav button {
     position: absolute;
-    top: 0.5em; /* Verhoog deze waarde om de knop verder naar boven te verplaatsen */
-    right: 0.5em;
+    top: -2em; /* Verhoog deze waarde om de knop verder naar boven te verplaatsen */
+    right: -3em;
     background: none;
     border: none;
     cursor: pointer;
@@ -205,9 +205,11 @@ footer a img {
 /* Stijl voor de copyright melding */
 footer p {
     font-size: 14px;
-    color: #666; /* Lichtgrijze tekstkleur */
+    color: #fff; /* Lichtgrijze tekstkleur */
     margin: 10px 0 0;
+    background-color: #000;
 }
+
 
 h3 {
     color: var(--letterkleur);
@@ -217,5 +219,36 @@ h3 {
     font-family: 'Roboto', sans-serif;
     font-weight: 550;
     letter-spacing: 0.1em;
+    text-decoration: none;
 }
 
+/* Voor het centreren van h3 in de artikelen */
+article a {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontaal centreren */
+    text-align: center; /* Tekst in het midden */
+}
+
+article h3 {
+    margin: 10px 0; /* Optionele marge om wat ruimte toe te voegen */
+    font-size: 1.5em; /* Eventueel de grootte aanpassen */
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --letterkleur: #fff; /* Lichtere letterkleur */
+        --h2kleur: #4a4a4a; /* Donkerdere kleur voor borders om h2 */
+        --mainachtergrondkleur: #121212; /* Donkere achtergrondkleur */
+        --tweedeachtergrondkleur: #333; /* Donkerdere tweede achtergrondkleur */
+        --wit: #1e1e1e; /* Donker wit voor donkere modus */
+        --grijs: #aaaaaa;
+        --zwart: #fff; /* Lichtere tekstkleur */
+        --headingeten: #c1a91f;
+        --achtergrondeten: #3e3e1a;
+        --paars: #5e3b5e;
+        --donkerpaars: #442944;
+        --roze: #402020;
+    }
+}
