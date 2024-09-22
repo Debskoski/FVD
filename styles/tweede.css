@@ -1,0 +1,135 @@
+:root {
+    --letterkleur: #000; /* Letterkleur */
+    --h2kleur: #efbebe; /* Kleur voor borders om h2 */
+    --mainachtergrondkleur: #f6f6f6; /* Achtergrondkleur */
+    --tweedeachtergrondkleur: #fed6d6; /* Tweede achtergrondkleur */
+    --wit: #fff; /* Witte kleur */
+    --grijs: #6e6d6d;
+    --zwart: #000; /* Zwart als tekstkleur */
+    --headingeten: #FBE59A;
+    --achtergrondeten: #FEF8E1;
+    --paars: #E4CCE4;
+    --donkerpaars: #F8EAF8;
+    --roze: #FEF2F2;
+}
+
+section:nth-of-type(2) a {
+    display: grid;
+    grid-template-columns: 6em 1fr;
+    grid-template-rows: max-content 1fr;
+    gap: 0 1em;
+    padding: 1em;
+}
+
+h3  {
+    background-color: var(--tweedeachtergrondkleur);
+    color: var(--letterkleur);
+    padding: 4px 8px ;
+    font-size: 1em;
+    width: fit-content;
+    
+    
+}
+
+section:nth-of-type(2) a img {
+    width: 100%;
+    height: auto;
+    display: block;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+section:nth-of-type(1)  img {
+    display: flex;
+    justify-content: center; /* Horizontaal centreren */
+    max-width: 100%; /* Zorgt ervoor dat de afbeelding responsief is */
+    height: auto;
+}
+
+section:nth-of-type(2) h2 {
+    background-color: var(--tweedeachtergrondkleur);
+    color: var(--letterkleur);
+    padding: 4px 8px ;
+    font-size: 1em;
+    width: fit-content;
+    
+}
+
+
+p {
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: var(--zwart);
+}
+
+button {
+    border: 1px solid var(--letterkleur);
+    background-color: transparent;
+    color: var(--letterkleur);
+    font: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 2em auto;
+    text-align: center;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 550;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+}
+
+
+button:hover {
+    background-color: var(--h2kleur);
+    border: none;
+}
+
+h3 { 
+    margin-top: 2em;
+    
+}
+
+section:first-of-type p:first-of-type {
+    font-weight: bold;
+}
+
+    
+section:nth-of-type(1) p,
+section:nth-of-type(3) p
+{
+    margin-left: 1.5em;
+    margin-top: 0.5em;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+   
+}
+
+
+section:nth-of-type(1) h2,
+section:nth-of-type(3) h2 {
+    /* Je stijlen hier */
+    margin-left: 1.5em;
+    margin-top: 1em;
+    line-height: 1.5em;
+   
+}
+
+h4 {
+    color: var(--grijs);
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   text-transform: uppercase;
+   font-size: 0.7em;
+  margin-bottom: 3em;
+  margin-left: 3em;
+}

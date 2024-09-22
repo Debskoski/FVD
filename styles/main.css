@@ -86,7 +86,10 @@ section:nth-of-type(1) img {
     display: block;
     transition: opacity 0.3s ease;
     margin-bottom: 1em;
+   
+   
 }
+
 
 /* Plaats de tekst boven de afbeelding */
 section:nth-of-type(1) h3, 
@@ -293,6 +296,11 @@ section:nth-of-type(6) h2 {
 
 }
 
-image :hover {
-    color:hotpink;
+/* Hover effect voor alle afbeeldingen */
+   /* Hover effect voor doorzichtigheid op alle afbeeldingen */
+img:hover {
+    opacity: 0.8; /* Pas de mate van doorzichtigheid aan (0.5 is 50% doorzichtig) */
+    transition: opacity 0.3s ease; /* Voegt een vloeiende overgang toe */
 }
+
+
