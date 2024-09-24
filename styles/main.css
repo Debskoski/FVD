@@ -32,12 +32,22 @@
     }
 }
 
+@font-face {
+    font-family: rechts;
+    src: url(../fonts/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: links;
+    src: url(../fonts/KFOlCnqEu92Fr1MmWUlvAA.woff) format("woff2");
+}
 
 /* Basis styling voor de eerste section */
 section:nth-of-type(1) {
     position: relative;
     margin: 10px;
     overflow: hidden;
+    
 }
 
 section:nth-of-type(1) img {
@@ -60,17 +70,7 @@ section:nth-of-type(1)::before {
     z-index: 1;
 }
 
-section:nth-of-type(1):hover::before {
-    opacity: 1;
-}
 
-section:nth-of-type(1) a {
-    position: relative;
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    z-index: 2;
-}
 
 /* Stel de sectie in om de afbeelding en tekst te bevatten */
 section:nth-of-type(1) {
@@ -155,13 +155,13 @@ section {
     gap: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     section {
         flex-direction: column;
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 640px) {
     section {
         flex-direction: row;
     }
@@ -205,7 +205,7 @@ h2, h3 {
     display: inline-block; /* Zorgt ervoor dat de breedte alleen de tekst omvat */
     text-align: center;
     font-size: 1em;
-    font-family: 'Roboto', sans-serif;
+    font-family:links;
     font-weight: 550;
     letter-spacing: 0.1em; /* Ruimte tussen letters blijft hetzelfde */
     text-transform: uppercase;
@@ -274,7 +274,7 @@ p {
     text-decoration: none;
     font-size: 1rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-text-align: left;
+    text-align: left;
 }
 
 a {
@@ -301,6 +301,10 @@ section:nth-of-type(6) h2 {
 img:hover {
     opacity: 0.8; /* Pas de mate van doorzichtigheid aan (0.5 is 50% doorzichtig) */
     transition: opacity 0.3s ease; /* Voegt een vloeiende overgang toe */
+}
+
+p {
+    font-style: sans;
 }
 
 

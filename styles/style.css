@@ -161,10 +161,14 @@ nav a:hover {
 /* Algemene styling voor de footer */
 footer {
     background-color: #f8f8f8; /* Lichtgrijze achtergrondkleur */
-    padding: 20px;
     text-align: center;
     border-top: 1px solid #ddd; /* Lichtgrijze bovenrand */
     font-family: Arial, sans-serif;
+    list-style: none;
+}
+footer li{
+    list-style-type: none;
+
 }
 
 /* Logo stijl */
@@ -175,15 +179,35 @@ footer img {
 }
 
 /* Stijl voor de navigatielijst */
-footer ul {
-    list-style: none; /* Verwijder opsommingstekens */
-    padding: 0;
-    margin: 10px 0;
+
+
+footer ul:first-of-type {
+    display: list-item;
+    margin: 0 10px;
+    
+ 
 }
 
-footer ul li {
-    display: inline;
-    margin: 0 10px;
+
+
+footer ul:first-of-type li{
+    display: flex;
+    border-top-style: solid;
+    margin: 0;
+    padding: 2em 0;
+    width: 90%;
+    align-self: center;
+    border-color: #c7c7c7;
+
+}
+
+footer ul:first-of-type a{ 
+    text-align: left;
+}
+
+footer ul:first-of-type li:last-child {
+    border-bottom: solid;
+    border-color: #c7c7c7;
 }
 
 footer ul li a {
@@ -192,23 +216,46 @@ footer ul li a {
     font-weight: bold;
 }
 
-footer ul li a:hover {
-    color: #007bff; /* Blauwe kleur bij hover */
-}
 
-/* Stijl voor de sociale media iconen */
-footer a img {
-    max-width: 30px; /* Maximaal 30 pixels breed */
-    height: auto;
-    margin: 0 5px;
-}
+
 
 /* Stijl voor de copyright melding */
-footer p {
-    font-size: 14px;
-    color: #fff; /* Lichtgrijze tekstkleur */
-    margin: 10px 0 0;
+footer p:last-of-type {
+    bottom: 0;
+    color: #fff; /* Witte tekstkleur */
+    display: flex; /* Flexbox om de afbeelding en tekst naast elkaar te zetten */
+    align-items: center; /* Verticaal centreren van de inhoud */
+    padding: 10px; /* Voegt wat padding toe */
+    box-sizing: border-box; /* Houdt de padding binnen de breedte van de footer */
+    gap: 20px; /* Voegt ruimte toe tussen afbeelding en tekst */
+}
+
+/* Stijl voor de laatste afbeelding in de footer */
+footer img:last-of-type {
+    height: auto; /* Zorgt dat de hoogte wordt aangepast aan de breedte */
+}
+
+footer ul {
+    width: 100%;
+    
+   
+}
+
+footer ul img {
+    width: 2em;
+    margin-left: 1em;
+}
+
+footer section {
+    display: flex;
     background-color: #000;
+    
+}
+
+footer ul:nth-child(3) {
+   display: flex;
+   justify-content: center;
+
 }
 
 
@@ -217,7 +264,7 @@ h3 {
     text-decoration: none;
     font-size: 0.7em;
     transition: color 0.3s ease;
-    font-family: 'Roboto', sans-serif;
+    font-family: sans;
     font-weight: 550;
     letter-spacing: 0.1em;
     text-decoration: none;
@@ -253,11 +300,4 @@ article h3 {
         --roze: #402020;
     }
 }
-
-
-
-
-
-
-
 

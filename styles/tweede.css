@@ -53,14 +53,18 @@ section:nth-of-type(2) h2 {
     padding: 4px 8px ;
     font-size: 1em;
     width: fit-content;
-    
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: 3em;
+    margin-left: 35%;
 }
 
 
 p {
     text-decoration: none;
     font-size: 1rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: sans;
 text-align: left;
 }
 
@@ -70,29 +74,30 @@ a {
 }
 
 button {
-    border: 1px solid var(--letterkleur);
-    background-color: transparent;
+    border: transparent;
+    background-color: var(--h2kleur);
     color: var(--letterkleur);
     font: inherit;
     cursor: pointer;
-    display: inline-flex;
+    display: block; /* Verander inline-flex naar block */
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
-    margin: 2em auto;
+    margin: 2em auto; /* Hierdoor centreert de button */
     text-align: center;
     font-size: 1em;
     transition: background-color 0.3s, color 0.3s;
     font-weight: 550;
-    font-family: 'Roboto', sans-serif;
+    font-family: sans;
     text-transform: uppercase;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.2em;
 }
 
 
 button:hover {
-    background-color: var(--h2kleur);
-    border: none;
+    opacity: 0.8; /* Pas de mate van doorzichtigheid aan (0.5 is 50% doorzichtig) */
+    transition: opacity 0.3s ease; /* Voegt een vloeiende overgang toe */
+    
 }
 
 h3 { 
@@ -122,8 +127,20 @@ section:nth-of-type(3) h2 {
     margin-left: 1.5em;
     margin-top: 1em;
     line-height: 1.5em;
+ 
+
    
 }
+
+
+section:nth-of-type(2) h3,
+section:nth-of-type(3) h3 {
+    text-transform: uppercase;
+    
+
+}
+
+
 
 h4 {
     color: var(--grijs);
