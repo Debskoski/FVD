@@ -270,8 +270,32 @@ img:hover {
     section:nth-of-type(5) ul,
     section:nth-of-type(7) ul {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-columns: 1fr 1fr 1fr 1fr ; 
         grid-template-rows: auto auto;
         list-style: none;
+    }
+
+    section:nth-of-type(4) ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        list-style: none;
+
+    }
+    section:nth-of-type(4) ul li:first-of-type {
+        grid-column: 1/2;
+        grid-row: 1/5;
+        
+    }
+
+    section:nth-of-type(6) ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        list-style: none;
+
+    }
+    section:nth-of-type(6) ul li:first-of-type {
+        grid-column: 1/2;
+        grid-row: 1/5;
+        
     }
 }
