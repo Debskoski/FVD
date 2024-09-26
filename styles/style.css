@@ -6,7 +6,9 @@
     --wit: #fff; /* Witte kleur */
     --grijs: #6e6d6d;
     --zwart: #000; /* Zwart als tekstkleur */
+    --border: #c7c7c7;
 }
+
 .visually-hidden {
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
@@ -19,15 +21,46 @@
   
 body {
     background-color: var(--mainachtergrondkleur);
+    overflow-x: hidden; /* Voorkomt horizontaal scrollen */
 }
 
+/* Reset voor marges en paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Typografie */
+nav a {
+    color: var(--letterkleur);
+    text-decoration: none;
+    font-size: 0.7em; /* 11.2px */
+    transition: color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 550;
+    letter-spacing: 0.1em;
+}
+
+h3 {
+    color: var(--letterkleur);
+    text-decoration: none;
+    font-size: 0.7em; /* 11.2px */
+    transition: color 0.3s ease;
+    font-family: sans;
+    font-weight: 550;
+    letter-spacing: 0.1em;
+}
+
+/* Layout */
 header {
     background-color: var(--wit);
-    padding: 1em 4.5em;
+    padding: 1em 4.5em; /* 16px 72px */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.125em 0.125em rgba(0, 0, 0, 0.2); /* 2px */
     position: sticky;
     top: 0;
     z-index: 20; /* Zorgt ervoor dat de header boven andere elementen staat */
@@ -42,56 +75,34 @@ nav {
     z-index: 15; /* Zorgt ervoor dat de nav boven andere content staat */
 }
 
-/* Reset voor marges en paddings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    position: relative;
-}
-
 /* Stijlen voor het logo */
 nav img {
-    height: 2.5em; /* Pas de hoogte van het logo aan naar wens */
-    margin-right: 2em; /* Ruimte tussen logo en navigatie-items */
-	z-index: 99;
+    height: 2.5em; /* 40px */
+    margin-right: 2em; /* 32px */
+    z-index: 99;
 }
 
-/* Stijlen voor de navigatie links */
-nav a {
-    color: var(--letterkleur);
-    text-decoration: none;
-    font-size: 0.7em;
-    transition: color 0.3s ease;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 550;
-    letter-spacing: 0.1em;
-}
-
-/* Hamburgerknop */
 /* Hamburgerknop */
 nav button {
     position: absolute;
-    top: -2em; /* Verhoog deze waarde om de knop verder naar boven te verplaatsen */
-    right: -3em;
+    top: -2em; /* -32px */
+    right: -3em; /* -48px */
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 2em;
+    font-size: 2em; /* 32px */
     display: block;
     z-index: 30; /* Zorgt dat de knop boven het menu en de nav staat */
 }
 
-/* Verwijder hover-effect voor de button */
 nav button:hover {
     color: inherit; /* Zorgt ervoor dat er geen kleurverandering is bij hover */
     background: none; /* Geen achtergrondverandering */
     cursor: pointer; /* Houdt de pointer als muisicoon */
 }
 
-/* Hamburgerknop afbeelding */
 nav button img {
-    width: 1em; /* Breedte van de hamburgerknop */
+    width: 1em; /* 16px */
     height: auto;
 }
 
@@ -115,7 +126,7 @@ nav ul {
 
 /* Menu-items */
 nav ul li {
-    margin: 1.5em 0; /* Ruimte tussen de menu-items */
+    margin: 1.5em 0; /* 24px */
 }
 
 nav ul li a {
@@ -129,8 +140,7 @@ nav.active ul {
 }
 
 /* Desktopstijl: bij grotere schermen */
-@media (min-width: 769px) {
-    /* Menu wordt statisch, horizontaal en zichtbaar */
+@media (min-width: 1000px) {
     nav ul {
         position: static;
         transform: none; /* Verwijdert de animatie */
@@ -140,94 +150,79 @@ nav.active ul {
         padding: 0;
     }
 
-    /* Verberg de hamburgerknop */
     nav button {
-        display: none;
-		
+        display: none; /* Verberg de hamburgerknop */
     }
 
-    /* Menu-items inline bij desktop */
     nav ul li {
-        margin: 0 1em; /* Ruimte tussen de items horizontaal */
+        margin: 0 1em; /* 16px */
     }
 }
-
 
 nav a:hover {
     color: var(--h2kleur); /* Kleur van de tekst bij hover */
 }
 
-
 /* Algemene styling voor de footer */
 footer {
-    background-color: #f8f8f8; /* Lichtgrijze achtergrondkleur */
+    background-color: var(--mainachtergrondkleur); /* Lichtgrijze achtergrondkleur */
     text-align: center;
-    border-top: 1px solid #ddd; /* Lichtgrijze bovenrand */
+    border-top: 0.0625em solid #ddd; /* 1px */
     font-family: Arial, sans-serif;
-    list-style: none;
 }
-footer li{
-    list-style-type: none;
 
+footer li {
+    list-style-type: none;
 }
 
 /* Logo stijl */
 footer img {
-    max-width: 100px; /* Maximaal 100 pixels breed */
+    max-width: 6.25em; /* 100px */
     height: auto;
-    margin: 10px 0;
+    margin: 0.625em 0; /* 10px */
 }
 
 /* Stijl voor de navigatielijst */
-
-
 footer ul:first-of-type {
     display: list-item;
-    margin: 0 10px;
-    
- 
+    margin: 0 0.625em; /* 10px */
 }
 
-
-
-footer ul:first-of-type li{
+footer ul:first-of-type li {
     display: flex;
     border-top-style: solid;
     margin: 0;
-    padding: 2em 0;
+    padding: 2em 0; /* 32px */
     width: 90%;
     align-self: center;
-    border-color: #c7c7c7;
-
+    border-color: var(--border);
 }
 
-footer ul:first-of-type a{ 
+footer ul:first-of-type a {
     text-align: left;
 }
 
 footer ul:first-of-type li:last-child {
     border-bottom: solid;
-    border-color: #c7c7c7;
+    border-color: var(--border);
 }
 
 footer ul li a {
     text-decoration: none;
-    color: #333; /* Donkergrijze tekstkleur */
+    color: var(--letterkleur); /* Donkergrijze tekstkleur */
     font-weight: bold;
 }
-
-
-
 
 /* Stijl voor de copyright melding */
 footer p:last-of-type {
     bottom: 0;
-    color: #fff; /* Witte tekstkleur */
+    color: var(--wit); /* Witte tekstkleur */
     display: flex; /* Flexbox om de afbeelding en tekst naast elkaar te zetten */
     align-items: center; /* Verticaal centreren van de inhoud */
-    padding: 10px; /* Voegt wat padding toe */
+    padding: 0.625em; /* 10px */
     box-sizing: border-box; /* Houdt de padding binnen de breedte van de footer */
-    gap: 20px; /* Voegt ruimte toe tussen afbeelding en tekst */
+    gap: 1.25em; /* 20px */
+    font-size: 1em; /* 16px */
 }
 
 /* Stijl voor de laatste afbeelding in de footer */
@@ -237,67 +232,48 @@ footer img:last-of-type {
 
 footer ul {
     width: 100%;
-    
-   
 }
 
 footer ul img {
-    width: 2em;
-    margin-left: 1em;
+    width: 2em; /* 32px */
+    margin-left: 0.625em; /* 10px */
 }
 
 footer section {
     display: flex;
-    background-color: #000;
-    
+    background-color: var(--letterkleur);
 }
 
 footer ul:nth-child(3) {
    display: flex;
    justify-content: center;
-
-}
-
-
-h3 {
-    color: var(--letterkleur);
-    text-decoration: none;
-    font-size: 0.7em;
-    transition: color 0.3s ease;
-    font-family: sans;
-    font-weight: 550;
-    letter-spacing: 0.1em;
-    text-decoration: none;
-}
-
-/* Voor het centreren van h3 in de artikelen */
-article a {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Horizontaal centreren */
-    text-align: center; /* Tekst in het midden */
-}
-
-article h3 {
-    margin: 10px 0; /* Optionele marge om wat ruimte toe te voegen */
-    font-size: 1.5em; /* Eventueel de grootte aanpassen */
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
         --letterkleur: #fff; /* Lichtere letterkleur */
-        --h2kleur: #4a4a4a; /* Donkerdere kleur voor borders om h2 */
+        --h2kleur: #d9a6a6; /* Lichtere kleur voor borders om h2 */
         --mainachtergrondkleur: #121212; /* Donkere achtergrondkleur */
-        --tweedeachtergrondkleur: #333; /* Donkerdere tweede achtergrondkleur */
+        --tweedeachtergrondkleur: #1e1e1e; /* Donkerdere tweede achtergrondkleur */
         --wit: #1e1e1e; /* Donker wit voor donkere modus */
-        --grijs: #aaaaaa;
+        --grijs: #aaaaaa; /* Lichtere grijs voor leesbaarheid */
         --zwart: #fff; /* Lichtere tekstkleur */
-        --headingeten: #c1a91f;
-        --achtergrondeten: #3e3e1a;
-        --paars: #5e3b5e;
-        --donkerpaars: #442944;
-        --roze: #402020;
+        --border: #333; /* Donkerdere border kleur */
+        --headingeten: #c1a91f; /* Gele kleur voor headings */
+        --achtergrondeten: #3e3e1a; /* Donkergrijze achtergrondkleur voor eten */
+        --paars: #5e3b5e; /* Donkerpaarse kleur */
+        --donkerpaars: #442944; /* Nog donkerder paarse kleur */
+        --roze: #402020; /* Roze kleur */
     }
-}
 
+    /* Specific styles for dark mode */
+    header, nav, footer {
+        background-color: var(--tweedeachtergrondkleur); /* Use darker background for header and footer */
+    }
+
+    nav a, footer ul li a {
+        color: var(--letterkleur); /* Light text color for links */
+    }
+
+}

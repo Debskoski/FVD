@@ -39,6 +39,9 @@ section:nth-of-type(2) a img {
     grid-row-start: 1;
     grid-row-end: 3;
 }
+main section:nth-of-type(1) p {
+    color: var(--zwart);
+}
 
 section:nth-of-type(1)  img {
     display: flex;
@@ -121,8 +124,8 @@ section:nth-of-type(3) p
 }
 
 
-section:nth-of-type(1) h2,
-section:nth-of-type(3) h2 {
+ section:nth-of-type(1) h2,
+ section:nth-of-type(3) h2 {
     /* Je stijlen hier */
     margin-left: 1.5em;
     margin-top: 1em;
