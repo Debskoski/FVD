@@ -9,6 +9,34 @@
     --border: #c7c7c7;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --letterkleur: #fff; /* Lichtere letterkleur */
+        --h2kleur: #d9a6a6; /* Lichtere kleur voor borders om h2 */
+        --mainachtergrondkleur: #121212; /* Donkere achtergrondkleur */
+        --tweedeachtergrondkleur: #1e1e1e; /* Donkerdere tweede achtergrondkleur */
+        --wit: #1e1e1e; /* Donker wit voor donkere modus */
+        --grijs: #aaaaaa; /* Lichtere grijs voor leesbaarheid */
+        --zwart: #fff; /* Lichtere tekstkleur */
+        --border: #333; /* Donkerdere border kleur */
+        --headingeten: #c1a91f; /* Gele kleur voor headings */
+        --achtergrondeten: #3e3e1a; /* Donkergrijze achtergrondkleur voor eten */
+        --paars: #5e3b5e; /* Donkerpaarse kleur */
+        --donkerpaars: #442944; /* Nog donkerder paarse kleur */
+        --roze: #402020; /* Roze kleur */
+    }
+
+    /* Specific styles for dark mode elements */
+    header, nav, footer {
+        background-color: var(--tweedeachtergrondkleur); /* Use darker background for header and footer */
+    }
+
+    nav a, footer ul li a {
+        color: var(--letterkleur); /* Light text color for links */
+    }
+}
+
+
 .visually-hidden {
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
@@ -30,6 +58,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     position: relative;
+
 }
 
 /* Typografie */
@@ -250,30 +279,9 @@ footer ul:nth-child(3) {
 }
 
 /* Dark mode */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --letterkleur: #fff; /* Lichtere letterkleur */
-        --h2kleur: #d9a6a6; /* Lichtere kleur voor borders om h2 */
-        --mainachtergrondkleur: #121212; /* Donkere achtergrondkleur */
-        --tweedeachtergrondkleur: #1e1e1e; /* Donkerdere tweede achtergrondkleur */
-        --wit: #1e1e1e; /* Donker wit voor donkere modus */
-        --grijs: #aaaaaa; /* Lichtere grijs voor leesbaarheid */
-        --zwart: #fff; /* Lichtere tekstkleur */
-        --border: #333; /* Donkerdere border kleur */
-        --headingeten: #c1a91f; /* Gele kleur voor headings */
-        --achtergrondeten: #3e3e1a; /* Donkergrijze achtergrondkleur voor eten */
-        --paars: #5e3b5e; /* Donkerpaarse kleur */
-        --donkerpaars: #442944; /* Nog donkerder paarse kleur */
-        --roze: #402020; /* Roze kleur */
-    }
 
-    /* Specific styles for dark mode */
-    header, nav, footer {
-        background-color: var(--tweedeachtergrondkleur); /* Use darker background for header and footer */
-    }
 
-    nav a, footer ul li a {
-        color: var(--letterkleur); /* Light text color for links */
-    }
+   
 
-}
+
+

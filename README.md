@@ -192,6 +192,13 @@ logo in het hamburgermenu
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
+  -object fit cover zetten op de grootse media query
+  -overflow:hidden vzodat je niet horizontaal kan scrollen
+  -,nav:focus:within voor toegankelijkheid navbar
+  -test toegankelijkheid op telefoonscherm nog doen
+  -als je inert op je nav zet is hij niet actief en dan moet je er op klikken als je hem openmaakt.
+  -navbutton veranderen
+  -darkmodus bovenin zetten
 
   
 

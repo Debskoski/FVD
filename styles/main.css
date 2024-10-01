@@ -81,6 +81,8 @@ main section:nth-of-type(1) p {
     border-radius: 0.3125em; /* 5px */
 }
 
+
+
 /* Knoppen stijl */
 button {
     border: 0.0625em solid var(--letterkleur); /* 1px */
@@ -122,6 +124,10 @@ h2, h3 {
     box-sizing: border-box; /* Zorgt ervoor dat de border om de tekst heen zit zonder extra ruimte */
     margin: 0; /* Verwijdert eventuele extra marges */
     width: fit-content;
+}
+
+h3 {
+    font-family: rechts;
 }
 
 section:nth-of-type(2) {
@@ -208,6 +214,20 @@ img:hover {
     transition: opacity 0.3s ease; /* Voegt een vloeiende overgang toe */
 }
 
+button {
+    display: block; /* Zorgt ervoor dat de button een blokelement is */
+    margin: 1.25em auto; /* Centreert de button horizontaal */
+    padding: 0.625em 1.25em; /* 10px 20px */
+    text-align: center;
+}
+
+h2 {
+    display: block; /* Verandert het h2-element in een blokelement */
+    margin: 0 auto; /* Centreert het element horizontaal */
+    text-align: center; /* Centreert de tekst binnen het element */
+    width: fit-content; /* Houdt de breedte beperkt tot de tekst */
+}
+
 /* Voor middelgrote schermen */
 @media (min-width: 770px) { 
     section:first-of-type ul {
@@ -251,20 +271,27 @@ img:hover {
 
 }
 
-@media (min-width: 1000px) { 
-    section:first-of-type ul {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        gap: 0.625em; /* 10px */
-        padding: 0.3125em; /* 5px */
-        list-style: none;
-    }
-    /* Selecteer alleen de eerste afbeelding binnen de eerste sectie */
-    section:nth-of-type(1) li:first-of-type {
-        grid-column: 1; /* Plaats de grote foto in de eerste kolom */
-        grid-row: 1 / span 2;
-    }
+    @media (min-width: 1000px) { 
+        section:first-of-type ul {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            gap: 0.625em; /* 10px */
+            padding: 0.3125em; /* 5px */
+            list-style: none;
+        }
+        
+        /* Eerste afbeelding in de eerste sectie */
+        section:nth-of-type(1) li:first-of-type {
+            grid-column: 1; /* Plaats de grote foto in de eerste kolom */
+            grid-row: 1 / span 2;
+        }
+    
+        section ul img {
+            width: 100%;
+            height: 100%;
+            object-fit:fill; /* Vul de container volledig */
+        }
     section:nth-of-type(2) ul,
     section:nth-of-type(3) ul,
     section:nth-of-type(5) ul,
@@ -298,7 +325,12 @@ img:hover {
         grid-row: 1/5;
         
         
+        
     }
 
+    h3 { margin-top: 1em;}
+    }
     
-}
+
+
+

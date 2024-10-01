@@ -13,6 +13,69 @@
     --roze: #FEF2F2;
 }
 
+/* Bestaande kleuren */
+:root {
+    --letterkleur: #000; /* Letterkleur */
+    --h2kleur: #efbebe; /* Kleur voor borders om h2 */
+    --mainachtergrondkleur: #f6f6f6; /* Achtergrondkleur */
+    --tweedeachtergrondkleur: #fed6d6; /* Tweede achtergrondkleur */
+    --wit: #fff; /* Witte kleur */
+    --grijs: #6e6d6d;
+    --zwart: #000; /* Zwart als tekstkleur */
+    --headingeten: #FBE59A;
+    --achtergrondeten: #FEF8E1;
+    --paars: #E4CCE4;
+    --donkerpaars: #F8EAF8;
+    --roze: #FEF2F2;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --letterkleur: #fff; /* Lichtere tekstkleur */
+        --h2kleur: #9b4d4d; /* Donkere tint voor borders om h2 */
+        --mainachtergrondkleur: #1a1a1a; /* Donkere achtergrondkleur */
+        --tweedeachtergrondkleur: #333; /* Tweede donkere achtergrondkleur */
+        --wit: #333; /* Donkerdere kleur voor lichte vlakken */
+        --grijs: #c0c0c0; /* Lichtere grijstint voor tekst */
+        --zwart: #fff; /* Lichtere tekstkleur */
+        --headingeten: #d4b55f; /* Aangepaste donkermode kleur */
+        --achtergrondeten: #4b4514; /* Donkere achtergrond voor eten-sectie */
+        --paars: #5c4a5c;
+        --donkerpaars: #402840;
+        --roze: #7e4e4e;
+    }
+
+    body {
+        background-color: var(--mainachtergrondkleur);
+        color: var(--letterkleur);
+    }
+
+    h2, h3, p, a, button {
+        color: var(--letterkleur);
+    }
+
+    section {
+        background-color: var(--tweedeachtergrondkleur);
+    }
+
+    button {
+        background-color: var(--h2kleur);
+        color: var(--letterkleur);
+    }
+
+    button:hover {
+        background-color: #7b2d2d; /* Donkere hover kleur voor button */
+    }
+}
+
+
+
+@font-face {
+    font-family: rechts;
+    src: url(../fonts/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2) format("woff2");
+}
+
 section:nth-of-type(2) a {
     display: grid;
     grid-template-columns: 6em 1fr;
@@ -27,6 +90,7 @@ h3  {
     padding: 4px 8px ;
     font-size: 1em;
     width: fit-content;
+    font-family: rechts;
     
     
 }
@@ -43,24 +107,18 @@ main section:nth-of-type(1) p {
     color: var(--zwart);
 }
 
-section:nth-of-type(1)  img {
-    display: flex;
-    justify-content: center; /* Horizontaal centreren */
-    max-width: 100%; /* Zorgt ervoor dat de afbeelding responsief is */
-    height: auto;
-}
 
 section:nth-of-type(2) h2 {
     background-color: var(--tweedeachtergrondkleur);
     color: var(--letterkleur);
     padding: 4px 8px ;
     font-size: 1em;
-    width: fit-content;
     text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
+    font-family: rechts;
     margin-top: 3em;
-    margin-left: 35%;
+    width: fit-content;
+    
+   
 }
 
 
@@ -120,28 +178,40 @@ section:nth-of-type(3) p
     margin-top: 0.5em;
     line-height: 1.5em;
     margin-bottom: 1em;
+
    
 }
 
 
- section:nth-of-type(1) h2,
  section:nth-of-type(3) h2 {
     /* Je stijlen hier */
     margin-left: 1.5em;
     margin-top: 1em;
     line-height: 1.5em;
- 
+}
 
-   
+section:nth-of-type(1) h2 {
+    line-height: 2em;
+    font-size: 2.5em;
 }
 
 
+section:nth-of-type(1) h3,
 section:nth-of-type(2) h3,
 section:nth-of-type(3) h3 {
     text-transform: uppercase;
     
 
 }
+
+section:nth-of-type(2) h2{
+    display: block; /* Verandert het h2-element in een blokelement */
+    margin: 0 auto; /* Centreert het element horizontaal */
+    text-align: center; /* Centreert de tekst binnen het element */
+    width: fit-content; /* Houdt de breedte beperkt tot de tekst */
+}
+
+
 
 
 
@@ -153,3 +223,45 @@ h4 {
   margin-bottom: 3em;
   margin-left: 3em;
 }
+
+main section:first-of-type {
+    display: flex;
+    flex-direction: column;
+  justify-content: center; /* Horizontaal centreren */
+ padding: 2em 5em;
+}
+
+main section:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+  justify-content: center; /* Horizontaal centreren */
+ padding: 2em 5em;
+}
+
+main section:nth-of-type(3) img {
+    width: 100%;
+}
+
+
+
+@media (min-width: 770px) { 
+    section:nth-of-type(2) ul  {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: auto auto;
+        list-style: none;
+    }
+    section:nth-of-type(2) a {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1000px){
+    section:nth-of-type(2) ul
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ; 
+        grid-template-rows: auto auto;
+        list-style: none;
+}}
