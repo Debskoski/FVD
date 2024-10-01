@@ -93,14 +93,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | --- 
-  HTML, CSS Lukt het? 
-  Vraag over H1
-  Vraag over article tag 
-  shadow neemt heel vakje over 
+  - HTML, CSS
+  -Vraag over H1
+  -Vraag over article tag 
+  -shadow neemt heel vakje over 
 
 
   ### Verslag van meeting
@@ -127,29 +123,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
-
+  De HTML ging redelijk goed, ik had alleen moeite met simpele dingen zoals de border om de text even groot maken als de text en het logo moet ook bovenin het hamburgermenu staan, ik heb hier enorm lang mee lopen puzzelen maar ik kwam er echt niet uit. 
   ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
 vragen:
-blokken om de text
-logo in het hamburgermenu
+- Hoe krijg ik de blokken alleen om de text heen 
+- Hoe komt het logo ook in het hamburger menu te staan? Z-Index werkt niet. 
 
-
-
-  ### Verslag van meeting
+### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
  -Overal em ipv pixel
  -texten downoaden en allemaal aanpassen
  -voor dark modus de foto aanpassen naar dark modus
+ -Z-index hoger zetten en een foutje weghalen waardoor hij de Z-Index niet pakte.
+ -Om de box om de text te laten passen gebruik je : width:fit content. 
 
 </details>
 
@@ -165,6 +152,8 @@ logo in het hamburgermenu
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
+  Door de sections die ik in de website heb gemaakt is het makkelijker om hier doorheen te navigeren, op de originele site skipte hij vaak headings, ik heb geprobeerd dit zoveel mogelijk niet te doen, ik heb dus wel een visually hidden moeten gebruiken omdat ik anders een heading zou missen. Ik heb ook een dark modus gemaakt voor de website. 
+
 </details>
 
 
@@ -177,18 +166,12 @@ logo in het hamburgermenu
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  De dark modus heb ik gemaakt dit ging redelijk goed, ik heb ook de website volledig rsponsive gemaakt hier ben ik enorm trots op een paar enkele dingen werkte niet mee, ik heb erg lang lopen puzzelen met de goede elementen te selecteren ook was ik een beetje vergeten hoe ik grid moest toepassen maar ik had hierover al een heldere uitleg gekregen van 1 van mijn klasgenoten. 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
+Vragen:
+- Hoe krijg ik de afbeeldingen gelijk gelijnd, 
+- De navbutton gaat niet mee in de dark modus omdat het een plaatje is.
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
@@ -218,15 +201,18 @@ logo in het hamburgermenu
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+ Ik heb geleerde hoe je een website responsive kan maken, ik heb geleerd dat je op een website niet per se divs classes of ids nodig hebt maar heel makkelijk op andere manieren deze kan aanspreken in je css, wat mij enorm heeft geholpen tijdens het coderen is het inspecten en elementen uit en aan zetten om het probleem te achterhalen dit had ik in het eerste jaar ook enorm goed kunnen gebruiken. Ik heb ook geleerd hoe ik een grid kan gebruiken en wat nou eigenlijk flex box is wat heel handig kan zijn voor het maken van een website in de toekomst.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/een" width="375px" alt="top">
+   <img src="readme-images/twee" width="375px" alt="top">
+    <img src="readme-images/drie" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Het is me niet gelukt om de footer volledig responsive te maken de footer was uiteindelijk uberhaupt best een groot probleem bij het maken ik selecteerde vaak niet het goede onderdeel, ook hoort er in de navbar een zoekbalk te zijn maar die zit er ook niet bij in. Het is me ook niet gelukt om het hamburgermenu te veranderen naar daadwerkelijk 3 strepen in plaats van een image, ik had helaas geen tijd meer om hier naar te kijken ik had dit ook graag nog willen leren.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/vier" width="375px" alt="bummer">
+   <img src="readme-images/vijf" width="375px" alt="bummer">
 </details>
 
 
@@ -242,8 +228,11 @@ logo in het hamburgermenu
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. Chat Gpt - Gebruikt bij het maken van de navbar prompt: maak een navbar met deze html zet er naast wat je doet. 
+  2. Chat Gpt - Grid laten uitleggen prompt: maak een stappenplan om grid te gebruiken
+  3. Nienke Buursink - Uitgelegd hoe ik een media quiery gebruik om de pagina responsive te maken.
+  4. Teun - Geholpen met het selecteren van de juiste sections op de eerste pagina. 
+  5. Chat gpt  prompt - Zet be elke css item wat het doet en waarvoor ik het kan gebruiken.
+
 
 </details>
