@@ -203,16 +203,16 @@ Vragen:
   ### Dit ging goed/Heb ik geleerd: 
  Ik heb geleerde hoe je een website responsive kan maken, ik heb geleerd dat je op een website niet per se divs classes of ids nodig hebt maar heel makkelijk op andere manieren deze kan aanspreken in je css, wat mij enorm heeft geholpen tijdens het coderen is het inspecten en elementen uit en aan zetten om het probleem te achterhalen dit had ik in het eerste jaar ook enorm goed kunnen gebruiken. Ik heb ook geleerd hoe ik een grid kan gebruiken en wat nou eigenlijk flex box is wat heel handig kan zijn voor het maken van een website in de toekomst.
 
-  <img src="readme-images/een" width="375px" alt="top">
-   <img src="readme-images/twee" width="375px" alt="top">
-    <img src="readme-images/drie" width="375px" alt="top">
+  <img src="readme-images/een.png" width="375px" alt="top">
+   <img src="readme-images/twee.png" width="375px" alt="top">
+    <img src="readme-images/drie.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Het is me niet gelukt om de footer volledig responsive te maken de footer was uiteindelijk uberhaupt best een groot probleem bij het maken ik selecteerde vaak niet het goede onderdeel, ook hoort er in de navbar een zoekbalk te zijn maar die zit er ook niet bij in. Het is me ook niet gelukt om het hamburgermenu te veranderen naar daadwerkelijk 3 strepen in plaats van een image, ik had helaas geen tijd meer om hier naar te kijken ik had dit ook graag nog willen leren.
 
-  <img src="readme-images/vier" width="375px" alt="bummer">
-   <img src="readme-images/vijf" width="375px" alt="bummer">
+  <img src="readme-images/vier.png" width="375px" alt="bummer">
+   <img src="readme-images/vijf.png" width="375px" alt="bummer">
 </details>
 
 
