@@ -1,19 +1,4 @@
-:root {
-    --letterkleur: #000; /* Letterkleur */
-    --h2kleur: #efbebe; /* Kleur voor borders om h2 */
-    --mainachtergrondkleur: #f6f6f6; /* Achtergrondkleur */
-    --tweedeachtergrondkleur: #fed6d6; /* Tweede achtergrondkleur */
-    --wit: #fff; /* Witte kleur */
-    --grijs: #6e6d6d;
-    --zwart: #000; /* Zwart als tekstkleur */
-    --headingeten: #FBE59A;
-    --achtergrondeten: #FEF8E1;
-    --paars: #E4CCE4;
-    --donkerpaars: #F8EAF8;
-    --roze: #FEF2F2;
-}
 
-/* Bestaande kleuren */
 :root {
     --letterkleur: #000; /* Letterkleur */
     --h2kleur: #efbebe; /* Kleur voor borders om h2 */
@@ -65,7 +50,7 @@
     }
 
     button:hover {
-        background-color: #7b2d2d; /* Donkere hover kleur voor button */
+        background-color: #7b2d2d; 
     }
 }
 
@@ -90,9 +75,7 @@ h3  {
     padding: 4px 8px ;
     font-size: 1em;
     width: fit-content;
-    font-family: rechts;
-    
-    
+    font-family: rechts;  
 }
 
 section:nth-of-type(2) a img {
@@ -117,8 +100,6 @@ section:nth-of-type(2) h2 {
     font-family: rechts;
     margin-top: 3em;
     width: fit-content;
-    
-   
 }
 
 
@@ -140,11 +121,11 @@ button {
     color: var(--letterkleur);
     font: inherit;
     cursor: pointer;
-    display: block; /* Verander inline-flex naar block */
+    display: block; 
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
-    margin: 2em auto; /* Hierdoor centreert de button */
+    margin: 2em auto; 
     text-align: center;
     font-size: 1em;
     transition: background-color 0.3s, color 0.3s;
@@ -156,8 +137,8 @@ button {
 
 
 button:hover {
-    opacity: 0.8; /* Pas de mate van doorzichtigheid aan (0.5 is 50% doorzichtig) */
-    transition: opacity 0.3s ease; /* Voegt een vloeiende overgang toe */
+    opacity: 0.8; 
+    transition: opacity 0.3s ease; 
     
 }
 
@@ -190,7 +171,7 @@ section:nth-of-type(3) p
     line-height: 1.5em;
 }
 
-section:nth-of-type(1) h2 {
+section:nth-of-type(1) :first-child h2 {
     line-height: 2em;
     font-size: 2.5em;
 }
@@ -201,19 +182,14 @@ section:nth-of-type(2) h3,
 section:nth-of-type(3) h3 {
     text-transform: uppercase;
     
-
 }
 
 section:nth-of-type(2) h2{
-    display: block; /* Verandert het h2-element in een blokelement */
-    margin: 0 auto; /* Centreert het element horizontaal */
-    text-align: center; /* Centreert de tekst binnen het element */
-    width: fit-content; /* Houdt de breedte beperkt tot de tekst */
+    display: block; 
+    margin: 0 auto; 
+    text-align: center; 
+    width: fit-content; 
 }
-
-
-
-
 
 h4 {
     color: var(--grijs);
@@ -227,20 +203,19 @@ h4 {
 main section:first-of-type {
     display: flex;
     flex-direction: column;
-  justify-content: center; /* Horizontaal centreren */
+  justify-content: center; 
  padding: 2em 5em;
 }
 
 main section:nth-of-type(3) {
     display: flex;
     flex-direction: column;
-  justify-content: center; /* Horizontaal centreren */
+  justify-content: center; 
  padding: 2em 5em;
 }
 
-main section:nth-of-type(3) img {
-    width: 100%;
-}
+
+
 
 
 
@@ -255,6 +230,13 @@ main section:nth-of-type(3) img {
         display: grid;
         grid-template-columns: 1fr;
     }
+
+    section:nth-of-type(1) img:nth-of-type(2) {
+        width: 50%;
+        }
+        main {
+            padding: 0 6em;
+        }
 }
 
 @media (min-width: 1000px){
@@ -264,4 +246,13 @@ main section:nth-of-type(3) img {
         grid-template-columns: 1fr 1fr 1fr 1fr ; 
         grid-template-rows: auto auto;
         list-style: none;
-}}
+}
+section:nth-of-type(1) img:nth-of-type(2) {
+    width: 30%;
+    }
+    main {
+        padding: 0 10em;
+    }
+
+
+}

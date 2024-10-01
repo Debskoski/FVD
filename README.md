@@ -197,7 +197,7 @@ Vragen:
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitkomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
@@ -232,7 +232,7 @@ Vragen:
   2. Chat Gpt - Grid laten uitleggen prompt: maak een stappenplan om grid te gebruiken
   3. Nienke Buursink - Uitgelegd hoe ik een media quiery gebruik om de pagina responsive te maken.
   4. Teun - Geholpen met het selecteren van de juiste sections op de eerste pagina. 
-  5. Chat gpt  prompt - Zet be elke css item wat het doet en waarvoor ik het kan gebruiken.
+
 
 
 </details>

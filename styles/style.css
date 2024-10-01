@@ -1,45 +1,41 @@
 :root {
-    /* Definieer kleurvariabelen voor de lichte modus */
-    --letterkleur: #000; /* Tekstkleur */
-    --h2kleur: #efbebe; /* Kleur voor borders om h2-elementen */
-    --mainachtergrondkleur: #f6f6f6; /* Hoofdachtergrondkleur */
-    --tweedeachtergrondkleur: #fed6d6; /* Tweede achtergrondkleur */
-    --wit: #fff; /* Witte kleur */
-    --grijs: #6e6d6d; /* Grijze kleur */
-    --zwart: #000; /* Zwart als tekstkleur */
-    --border: #c7c7c7; /* Kleur van de border */
+    --letterkleur: #000;
+    --h2kleur: #efbebe;
+    --mainachtergrondkleur: #f6f6f6;
+    --tweedeachtergrondkleur: #fed6d6;
+    --wit: #fff;
+    --grijs: #6e6d6d;
+    --zwart: #000;
+    --border: #c7c7c7;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        /* Definieer kleurvariabelen voor de donkere modus */
-        --letterkleur: #fff; /* Lichtere tekstkleur */
-        --h2kleur: #d9a6a6; /* Lichtere kleur voor borders om h2 */
-        --mainachtergrondkleur: #121212; /* Donkere achtergrondkleur */
-        --tweedeachtergrondkleur: #1e1e1e; /* Donkerdere tweede achtergrondkleur */
-        --wit: #1e1e1e; /* Donker wit voor donkere modus */
-        --grijs: #aaaaaa; /* Lichtere grijs voor leesbaarheid */
-        --zwart: #fff; /* Lichtere tekstkleur */
-        --border: #333; /* Donkere kleur voor de border */
-        --headingeten: #c1a91f; /* Gele kleur voor headings */
-        --achtergrondeten: #3e3e1a; /* Donkergrijze achtergrondkleur voor voedselsecties */
-        --paars: #5e3b5e; /* Donkerpaarse kleur */
-        --donkerpaars: #442944; /* Nog donkerder paarse kleur */
-        --roze: #402020; /* Roze kleur */
+        --letterkleur: #fff;
+        --h2kleur: #d9a6a6;
+        --mainachtergrondkleur: #121212;
+        --tweedeachtergrondkleur: #1e1e1e;
+        --wit: #1e1e1e;
+        --grijs: #aaaaaa;
+        --zwart: #fff;
+        --border: #333;
+        --headingeten: #c1a91f;
+        --achtergrondeten: #3e3e1a;
+        --paars: #5e3b5e;
+        --donkerpaars: #442944;
+        --roze: #402020;
     }
 
-    /* Specifieke stijlen voor donkere mode-elementen */
     header, nav, footer {
-        background-color: var(--tweedeachtergrondkleur); /* Donkere achtergrond voor header en footer */
+        background-color: var(--tweedeachtergrondkleur);
     }
 
     nav a, footer ul li a {
-        color: var(--letterkleur); /* Lichte tekstkleur voor links */
+        color: var(--letterkleur);
     }
 }
 
 .visually-hidden {
-    /* Toegankelijkheidsklasse om elementen visueel te verbergen */
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
@@ -50,231 +46,219 @@
 }
 
 body {
-    background-color: var(--mainachtergrondkleur); /* Achtergrondkleur van de body */
-    overflow-x: hidden; /* Voorkomt horizontaal scrollen */
+    background-color: var(--mainachtergrondkleur);
+    overflow-x: hidden;
 }
 
-/* Reset voor marges en paddings */
 * {
-    margin: 0; /* Verwijder standaard marges */
-    padding: 0; /* Verwijder standaard paddings */
-    box-sizing: border-box; /* Zorgt ervoor dat padding en border worden meegerekend in de breedte en hoogte */
-    position: relative; /* Relatieve positionering voor alle elementen */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
 }
 
-/* Typografie */
 nav a {
-    color: var(--letterkleur); /* Tekstkleur voor nav links */
-    text-decoration: none; /* Geen onderstreping */
-    font-size: 0.7em; /* 11.2px */
-    transition: color 0.3s ease; /* Overgangseffect voor kleurverandering */
-    font-family: 'Roboto', sans-serif; /* Lettertype */
-    font-weight: 550; /* Dikte van het lettertype */
-    letter-spacing: 0.1em; /* Ruimte tussen letters */
+    color: var(--letterkleur);
+    text-decoration: none;
+    font-size: 0.7em;
+    transition: color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 550;
+    letter-spacing: 0.1em;
 }
 
 h3 {
-    color: var(--letterkleur); /* Tekstkleur voor h3-elementen */
-    text-decoration: none; /* Geen onderstreping */
-    font-size: 0.7em; /* 11.2px */
-    transition: color 0.3s ease; /* Overgangseffect voor kleurverandering */
-    font-family: sans; /* Lettertype */
-    font-weight: 550; /* Dikte van het lettertype */
-    letter-spacing: 0.1em; /* Ruimte tussen letters */
+    color: var(--letterkleur);
+    text-decoration: none;
+    font-size: 0.7em;
+    transition: color 0.3s ease;
+    font-family: sans;
+    font-weight: 550;
+    letter-spacing: 0.1em;
 }
 
-/* Lay-out */
 header {
-    background-color: var(--wit); /* Achtergrondkleur van de header */
-    padding: 1em 4.5em; /* Padding rond de header (boven/onder, links/rechts) */
-    display: flex; /* Flexbox voor uitlijnen */
-    align-items: center; /* Centreert items verticaal in de header */
-    justify-content: space-between; /* Verdeelt ruimte tussen de items */
-    box-shadow: 0 0.125em 0.125em rgba(0, 0, 0, 0.2); /* Schaduw voor diepte */
-    position: sticky; /* Blijft aan de bovenkant bij scrollen */
-    top: 0; /* Positie bovenaan */
-    z-index: 20; /* Zorgt ervoor dat de header boven andere elementen staat */
+    background-color: var(--wit);
+    padding: 1em 4.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0.125em 0.125em rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 20;
 }
 
 nav {
-    display: flex; /* Flexbox voor nav-items */
-    align-items: center; /* Centreert nav-items verticaal */
-    width: 100%; /* Breedte van de nav */
-    background-color: var(--wit); /* Achtergrondkleur van de nav */
-    position: relative; /* Relatieve positionering voor nav */
-    z-index: 15; /* Zorgt ervoor dat de nav boven andere content staat */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--wit);
+    position: relative;
+    z-index: 15;
 }
 
-/* Stijlen voor het logo */
 nav img {
-    height: 2.5em; /* Hoogte van het logo */
-    margin-right: 2em; /* Ruimte rechts van het logo */
-    z-index: 99; /* Zorgt ervoor dat het logo boven andere elementen staat */
+    height: 2.5em;
+    margin-right: 2em;
+    z-index: 99;
 }
 
-/* Hamburgerknop */
 nav button {
-    position: absolute; /* Absolute positionering voor de knop */
-    top: -2em; /* Plaats de knop boven de nav */
-    right: -3em; /* Plaats de knop aan de rechterkant van de nav */
-    background: none; /* Geen achtergrondkleur */
-    border: none; /* Geen rand */
-    cursor: pointer; /* Handcursor bij hover */
-    font-size: 2em; /* Grootte van de knop */
-    display: block; /* Blokweergave */
-    z-index: 30; /* Zorgt ervoor dat de knop boven het menu en de nav staat */
+    position: absolute;
+    top: -2em;
+    right: -3em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+    display: block;
+    z-index: 30;
 }
 
 nav button:hover {
-    color: inherit; /* Geen kleurverandering bij hover */
-    background: none; /* Geen achtergrondverandering */
-    cursor: pointer; /* Houdt de pointer als muisicoon */
+    color: inherit;
+    background: none;
+    cursor: pointer;
 }
 
 nav button img {
-    width: 1em; /* Breedte van de afbeelding in de knop */
-    height: auto; /* Houdt de hoogte in verhouding */
+    width: 1em;
+    height: auto;
 }
 
-/* Verborgen menu standaard */
 nav ul {
-    list-style: none; /* Geen opsommingstekens */
-    position: fixed; /* Vaste positionering */
-    top: 0; /* Bovenaan het scherm */
-    left: 0; /* Aan de linkerkant van het scherm */
-    width: 100%; /* Breedte van het menu */
-    height: 100vh; /* Hoogte van het menu (volledige hoogte van het scherm) */
-    background-color: var(--wit); /* Achtergrondkleur van het menu */
-    display: flex; /* Flexbox voor menu-items */
-    flex-direction: column; /* Verticaal gerangschikt */
-    align-items: center; /* Centreert menu-items */
-    justify-content: center; /* Centreert menu-items in het midden */
-    transform: translateY(-100%); /* Menu begint boven het scherm */
-    transition: transform 0.3s ease-in-out; /* Overgangseffect voor het tonen van het menu */
-    z-index: 10; /* Zorgt ervoor dat het menu onder de nav en hamburgerknop staat */
+    list-style: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--wit);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
 }
 
-/* Menu-items */
 nav ul li {
-    padding: 1.5em 0; /* Padding boven en onder de menu-items */
+    padding: 1.5em 0;
 }
 
 nav ul li a {
-    text-decoration: none; /* Geen onderstreping voor links */
-    color: var(--zwart); /* Tekstkleur van de menu-items */
+    text-decoration: none;
+    color: var(--zwart);
 }
 
-/* Wanneer het menu actief is (via class 'active') */
 nav.active ul {
-    transform: translateY(0); /* Menu schuift naar beneden */
+    transform: translateY(0);
 }
 
-/* Desktopstijl: bij grotere schermen */
+
+
 @media (min-width: 1000px) {
     nav ul {
-        position: static; /* Verwijder vaste positionering */
-        transform: none; /* Verwijdert de animatie */
-        height: auto; /* Hoogte van het menu automatisch */
-        flex-direction: row; /* Horizontale weergave van de menu-items */
-        justify-content: flex-end; /* Menu-items worden naar rechts uitgelijnd */
-        padding: 0; /* Geen extra padding */
+        position: static;
+        transform: none;
+        height: auto;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 0;
     }
 
     nav button {
-        display: none; /* Verberg de hamburgerknop op grotere schermen */
+        display: none;
     }
 
     nav ul li {
-        padding: 0 1em; /* Padding links en rechts van de menu-items */
+        padding: 0 1em;
     }
 }
 
 nav a:hover {
-    color: var(--h2kleur); /* Kleur van de tekst bij hover */
+    color: var(--h2kleur);
 }
 
-/* Algemene styling voor de footer */
 footer {
-    background-color: var(--mainachtergrondkleur); /* Achtergrondkleur van de footer */
-    text-align: center; /* Centreer de tekst in de footer */
-    border-top: 0.0625em solid #ddd; /* Toprand van de footer */
-    font-family: Arial, sans-serif; /* Lettertype voor de footer */
+    background-color: var(--mainachtergrondkleur);
+    text-align: center;
+    border-top: 0.0625em solid #ddd;
+    font-family: Arial, sans-serif;
 }
 
 footer li {
-    list-style-type: none; /* Geen opsommingstekens in de footer-lijst */
+    list-style-type: none;
 }
 
-/* Logo stijl in de footer */
 footer img {
-    max-width: 6.25em; /* Maximale breedte van het logo */
-    height: auto; /* Houdt de hoogte in verhouding */
-    padding: 0.625em 0; /* Padding boven en onder het logo */
+    max-width: 6.25em;
+    height: auto;
+    padding: 0.625em 0;
 }
 
-/* Stijl voor de navigatielijst in de footer */
 footer ul:first-of-type {
-    display: list-item; /* Zorgt ervoor dat de lijst zichtbaar is */
-    padding: 0 0.625em; /* Padding links en rechts van de lijst */
+    display: list-item;
+    padding: 0 0.625em;
 }
 
 footer ul:first-of-type li {
-    display: flex; /* Flexbox voor het uitlijnen van inhoud */
-    border-top-style: solid; /* Toprand van de lijstitems */
-    margin: 0; /* Geen marges */
-    padding: 2em 0; /* Padding boven en onder de lijstitems */
-    width: 90%; /* Breedte van de lijstitems */
-    align-self: center; /* Centreert de lijstitems */
-    border-color: var(--border); /* Kleur van de border */
+    display: flex;
+    border-top-style: solid;
+    margin: 0;
+    padding: 2em 0;
+    width: 90%;
+    align-self: center;
+    border-color: var(--border);
 }
 
 footer ul:first-of-type a {
-    text-align: left; /* Tekst uitlijnen naar links */
+    text-align: left;
 }
 
 footer ul:first-of-type li:last-child {
-    border-bottom: solid; /* Onderste rand van het laatste lijstitem */
-    border-color: var(--border); /* Kleur van de border */
+    border-bottom: solid;
+    border-color: var(--border);
 }
 
 footer ul li a {
-    text-decoration: none; /* Geen onderstreping voor links in de footer */
-    color: var(--letterkleur); /* Tekstkleur in de footer */
-    font-weight: bold; /* Vetgedrukte tekst */
+    text-decoration: none;
+    color: var(--letterkleur);
+    font-weight: bold;
 }
 
-/* Stijl voor de copyright melding */
 footer p:last-of-type {
-    bottom: 0; /* Plaatsing onderaan de footer */
-    color: var(--wit); /* Witte tekstkleur */
-    display: flex; /* Flexbox voor de afbeelding en tekst naast elkaar */
-    align-items: center; /* Verticaal centreren van de inhoud */
-    padding: 0.625em; /* Padding rond de inhoud */
-    box-sizing: border-box; /* Houdt de padding binnen de breedte van de footer */
-    gap: 1.25em; /* Ruimte tussen afbeelding en tekst */
-    font-size: 1em; /* Lettergrootte */
+    bottom: 0;
+    color: var(--wit);
+    display: flex;
+    align-items: center;
+    padding: 0.625em;
+    box-sizing: border-box;
+    gap: 1.25em;
+    font-size: 1em;
 }
 
-/* Stijl voor de laatste afbeelding in de footer */
 footer img:last-of-type {
-    height: auto; /* Zorgt dat de hoogte wordt aangepast aan de breedte */
+    height: auto;
 }
 
 footer ul {
-    width: 100%; /* Breedte van de footer-lijsten */
+    width: 100%;
 }
 
 footer ul img {
-    width: 2em; /* Breedte van de afbeeldingen in de footer */
-    padding-left: 0.625em; /* Padding links van de afbeeldingen */
+    width: 2em;
+    padding-left: 0.625em;
 }
 
 footer section {
-    display: flex; /* Flexbox voor het uitlijnen van secties */
-    background-color: var(--letterkleur); /* Achtergrondkleur van de footer-sectie */
+    display: flex;
+    background-color: var(--letterkleur);
 }
 
 footer ul:nth-child(3) {
-    display: flex; /* Flexbox voor de derde lijst in de footer */
-    justify-content: center; /* Centreert de lijstitems */
+    display: flex;
+    justify-content: center; 
 }
