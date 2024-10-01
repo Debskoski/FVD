@@ -1,190 +1,191 @@
 :root {
-    --letterkleur: #000; /* Letterkleur */
-    --h2kleur: #efbebe; /* Kleur voor borders om h2 */
-    --mainachtergrondkleur: #f6f6f6; /* Achtergrondkleur */
+    /* Definieer kleurvariabelen voor de lichte modus */
+    --letterkleur: #000; /* Tekstkleur */
+    --h2kleur: #efbebe; /* Kleur voor borders om h2-elementen */
+    --mainachtergrondkleur: #f6f6f6; /* Hoofdachtergrondkleur */
     --tweedeachtergrondkleur: #fed6d6; /* Tweede achtergrondkleur */
     --wit: #fff; /* Witte kleur */
-    --grijs: #6e6d6d;
+    --grijs: #6e6d6d; /* Grijze kleur */
     --zwart: #000; /* Zwart als tekstkleur */
-    --border: #c7c7c7;
+    --border: #c7c7c7; /* Kleur van de border */
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --letterkleur: #fff; /* Lichtere letterkleur */
+        /* Definieer kleurvariabelen voor de donkere modus */
+        --letterkleur: #fff; /* Lichtere tekstkleur */
         --h2kleur: #d9a6a6; /* Lichtere kleur voor borders om h2 */
         --mainachtergrondkleur: #121212; /* Donkere achtergrondkleur */
         --tweedeachtergrondkleur: #1e1e1e; /* Donkerdere tweede achtergrondkleur */
         --wit: #1e1e1e; /* Donker wit voor donkere modus */
         --grijs: #aaaaaa; /* Lichtere grijs voor leesbaarheid */
         --zwart: #fff; /* Lichtere tekstkleur */
-        --border: #333; /* Donkerdere border kleur */
+        --border: #333; /* Donkere kleur voor de border */
         --headingeten: #c1a91f; /* Gele kleur voor headings */
-        --achtergrondeten: #3e3e1a; /* Donkergrijze achtergrondkleur voor eten */
+        --achtergrondeten: #3e3e1a; /* Donkergrijze achtergrondkleur voor voedselsecties */
         --paars: #5e3b5e; /* Donkerpaarse kleur */
         --donkerpaars: #442944; /* Nog donkerder paarse kleur */
         --roze: #402020; /* Roze kleur */
     }
 
-    /* Specific styles for dark mode elements */
+    /* Specifieke stijlen voor donkere mode-elementen */
     header, nav, footer {
-        background-color: var(--tweedeachtergrondkleur); /* Use darker background for header and footer */
+        background-color: var(--tweedeachtergrondkleur); /* Donkere achtergrond voor header en footer */
     }
 
     nav a, footer ul li a {
-        color: var(--letterkleur); /* Light text color for links */
+        color: var(--letterkleur); /* Lichte tekstkleur voor links */
     }
 }
 
-
 .visually-hidden {
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
-  }
-  
+    /* Toegankelijkheidsklasse om elementen visueel te verbergen */
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
 body {
-    background-color: var(--mainachtergrondkleur);
+    background-color: var(--mainachtergrondkleur); /* Achtergrondkleur van de body */
     overflow-x: hidden; /* Voorkomt horizontaal scrollen */
 }
 
 /* Reset voor marges en paddings */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    position: relative;
-
+    margin: 0; /* Verwijder standaard marges */
+    padding: 0; /* Verwijder standaard paddings */
+    box-sizing: border-box; /* Zorgt ervoor dat padding en border worden meegerekend in de breedte en hoogte */
+    position: relative; /* Relatieve positionering voor alle elementen */
 }
 
 /* Typografie */
 nav a {
-    color: var(--letterkleur);
-    text-decoration: none;
+    color: var(--letterkleur); /* Tekstkleur voor nav links */
+    text-decoration: none; /* Geen onderstreping */
     font-size: 0.7em; /* 11.2px */
-    transition: color 0.3s ease;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 550;
-    letter-spacing: 0.1em;
+    transition: color 0.3s ease; /* Overgangseffect voor kleurverandering */
+    font-family: 'Roboto', sans-serif; /* Lettertype */
+    font-weight: 550; /* Dikte van het lettertype */
+    letter-spacing: 0.1em; /* Ruimte tussen letters */
 }
 
 h3 {
-    color: var(--letterkleur);
-    text-decoration: none;
+    color: var(--letterkleur); /* Tekstkleur voor h3-elementen */
+    text-decoration: none; /* Geen onderstreping */
     font-size: 0.7em; /* 11.2px */
-    transition: color 0.3s ease;
-    font-family: sans;
-    font-weight: 550;
-    letter-spacing: 0.1em;
+    transition: color 0.3s ease; /* Overgangseffect voor kleurverandering */
+    font-family: sans; /* Lettertype */
+    font-weight: 550; /* Dikte van het lettertype */
+    letter-spacing: 0.1em; /* Ruimte tussen letters */
 }
 
-/* Layout */
+/* Lay-out */
 header {
-    background-color: var(--wit);
-    padding: 1em 4.5em; /* 16px 72px */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 0.125em 0.125em rgba(0, 0, 0, 0.2); /* 2px */
-    position: sticky;
-    top: 0;
+    background-color: var(--wit); /* Achtergrondkleur van de header */
+    padding: 1em 4.5em; /* Padding rond de header (boven/onder, links/rechts) */
+    display: flex; /* Flexbox voor uitlijnen */
+    align-items: center; /* Centreert items verticaal in de header */
+    justify-content: space-between; /* Verdeelt ruimte tussen de items */
+    box-shadow: 0 0.125em 0.125em rgba(0, 0, 0, 0.2); /* Schaduw voor diepte */
+    position: sticky; /* Blijft aan de bovenkant bij scrollen */
+    top: 0; /* Positie bovenaan */
     z-index: 20; /* Zorgt ervoor dat de header boven andere elementen staat */
 }
 
 nav {
-    display: flex;
-    align-items: center; /* Centreert nav items verticaal in de nav */
-    width: 100%;
-    background-color: var(--wit);
-    position: relative;
+    display: flex; /* Flexbox voor nav-items */
+    align-items: center; /* Centreert nav-items verticaal */
+    width: 100%; /* Breedte van de nav */
+    background-color: var(--wit); /* Achtergrondkleur van de nav */
+    position: relative; /* Relatieve positionering voor nav */
     z-index: 15; /* Zorgt ervoor dat de nav boven andere content staat */
 }
 
 /* Stijlen voor het logo */
 nav img {
-    height: 2.5em; /* 40px */
-    margin-right: 2em; /* 32px */
-    z-index: 99;
+    height: 2.5em; /* Hoogte van het logo */
+    margin-right: 2em; /* Ruimte rechts van het logo */
+    z-index: 99; /* Zorgt ervoor dat het logo boven andere elementen staat */
 }
 
 /* Hamburgerknop */
 nav button {
-    position: absolute;
-    top: -2em; /* -32px */
-    right: -3em; /* -48px */
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 2em; /* 32px */
-    display: block;
-    z-index: 30; /* Zorgt dat de knop boven het menu en de nav staat */
+    position: absolute; /* Absolute positionering voor de knop */
+    top: -2em; /* Plaats de knop boven de nav */
+    right: -3em; /* Plaats de knop aan de rechterkant van de nav */
+    background: none; /* Geen achtergrondkleur */
+    border: none; /* Geen rand */
+    cursor: pointer; /* Handcursor bij hover */
+    font-size: 2em; /* Grootte van de knop */
+    display: block; /* Blokweergave */
+    z-index: 30; /* Zorgt ervoor dat de knop boven het menu en de nav staat */
 }
 
 nav button:hover {
-    color: inherit; /* Zorgt ervoor dat er geen kleurverandering is bij hover */
+    color: inherit; /* Geen kleurverandering bij hover */
     background: none; /* Geen achtergrondverandering */
     cursor: pointer; /* Houdt de pointer als muisicoon */
 }
 
 nav button img {
-    width: 1em; /* 16px */
-    height: auto;
+    width: 1em; /* Breedte van de afbeelding in de knop */
+    height: auto; /* Houdt de hoogte in verhouding */
 }
 
 /* Verborgen menu standaard */
 nav ul {
-    list-style: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--wit);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    list-style: none; /* Geen opsommingstekens */
+    position: fixed; /* Vaste positionering */
+    top: 0; /* Bovenaan het scherm */
+    left: 0; /* Aan de linkerkant van het scherm */
+    width: 100%; /* Breedte van het menu */
+    height: 100vh; /* Hoogte van het menu (volledige hoogte van het scherm) */
+    background-color: var(--wit); /* Achtergrondkleur van het menu */
+    display: flex; /* Flexbox voor menu-items */
+    flex-direction: column; /* Verticaal gerangschikt */
+    align-items: center; /* Centreert menu-items */
+    justify-content: center; /* Centreert menu-items in het midden */
     transform: translateY(-100%); /* Menu begint boven het scherm */
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; /* Overgangseffect voor het tonen van het menu */
     z-index: 10; /* Zorgt ervoor dat het menu onder de nav en hamburgerknop staat */
 }
 
 /* Menu-items */
 nav ul li {
-    margin: 1.5em 0; /* 24px */
+    padding: 1.5em 0; /* Padding boven en onder de menu-items */
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: var(--zwart); /* Pas deze kleur aan naar je gewenste tekstkleur */
+    text-decoration: none; /* Geen onderstreping voor links */
+    color: var(--zwart); /* Tekstkleur van de menu-items */
 }
 
 /* Wanneer het menu actief is (via class 'active') */
 nav.active ul {
-    transform: translateY(0); /* Menu slidet naar beneden */
+    transform: translateY(0); /* Menu schuift naar beneden */
 }
 
 /* Desktopstijl: bij grotere schermen */
 @media (min-width: 1000px) {
     nav ul {
-        position: static;
+        position: static; /* Verwijder vaste positionering */
         transform: none; /* Verwijdert de animatie */
-        height: auto;
+        height: auto; /* Hoogte van het menu automatisch */
         flex-direction: row; /* Horizontale weergave van de menu-items */
         justify-content: flex-end; /* Menu-items worden naar rechts uitgelijnd */
-        padding: 0;
+        padding: 0; /* Geen extra padding */
     }
 
     nav button {
-        display: none; /* Verberg de hamburgerknop */
+        display: none; /* Verberg de hamburgerknop op grotere schermen */
     }
 
     nav ul li {
-        margin: 0 1em; /* 16px */
+        padding: 0 1em; /* Padding links en rechts van de menu-items */
     }
 }
 
@@ -194,64 +195,64 @@ nav a:hover {
 
 /* Algemene styling voor de footer */
 footer {
-    background-color: var(--mainachtergrondkleur); /* Lichtgrijze achtergrondkleur */
-    text-align: center;
-    border-top: 0.0625em solid #ddd; /* 1px */
-    font-family: Arial, sans-serif;
+    background-color: var(--mainachtergrondkleur); /* Achtergrondkleur van de footer */
+    text-align: center; /* Centreer de tekst in de footer */
+    border-top: 0.0625em solid #ddd; /* Toprand van de footer */
+    font-family: Arial, sans-serif; /* Lettertype voor de footer */
 }
 
 footer li {
-    list-style-type: none;
+    list-style-type: none; /* Geen opsommingstekens in de footer-lijst */
 }
 
-/* Logo stijl */
+/* Logo stijl in de footer */
 footer img {
-    max-width: 6.25em; /* 100px */
-    height: auto;
-    margin: 0.625em 0; /* 10px */
+    max-width: 6.25em; /* Maximale breedte van het logo */
+    height: auto; /* Houdt de hoogte in verhouding */
+    padding: 0.625em 0; /* Padding boven en onder het logo */
 }
 
-/* Stijl voor de navigatielijst */
+/* Stijl voor de navigatielijst in de footer */
 footer ul:first-of-type {
-    display: list-item;
-    margin: 0 0.625em; /* 10px */
+    display: list-item; /* Zorgt ervoor dat de lijst zichtbaar is */
+    padding: 0 0.625em; /* Padding links en rechts van de lijst */
 }
 
 footer ul:first-of-type li {
-    display: flex;
-    border-top-style: solid;
-    margin: 0;
-    padding: 2em 0; /* 32px */
-    width: 90%;
-    align-self: center;
-    border-color: var(--border);
+    display: flex; /* Flexbox voor het uitlijnen van inhoud */
+    border-top-style: solid; /* Toprand van de lijstitems */
+    margin: 0; /* Geen marges */
+    padding: 2em 0; /* Padding boven en onder de lijstitems */
+    width: 90%; /* Breedte van de lijstitems */
+    align-self: center; /* Centreert de lijstitems */
+    border-color: var(--border); /* Kleur van de border */
 }
 
 footer ul:first-of-type a {
-    text-align: left;
+    text-align: left; /* Tekst uitlijnen naar links */
 }
 
 footer ul:first-of-type li:last-child {
-    border-bottom: solid;
-    border-color: var(--border);
+    border-bottom: solid; /* Onderste rand van het laatste lijstitem */
+    border-color: var(--border); /* Kleur van de border */
 }
 
 footer ul li a {
-    text-decoration: none;
-    color: var(--letterkleur); /* Donkergrijze tekstkleur */
-    font-weight: bold;
+    text-decoration: none; /* Geen onderstreping voor links in de footer */
+    color: var(--letterkleur); /* Tekstkleur in de footer */
+    font-weight: bold; /* Vetgedrukte tekst */
 }
 
 /* Stijl voor de copyright melding */
 footer p:last-of-type {
-    bottom: 0;
+    bottom: 0; /* Plaatsing onderaan de footer */
     color: var(--wit); /* Witte tekstkleur */
-    display: flex; /* Flexbox om de afbeelding en tekst naast elkaar te zetten */
+    display: flex; /* Flexbox voor de afbeelding en tekst naast elkaar */
     align-items: center; /* Verticaal centreren van de inhoud */
-    padding: 0.625em; /* 10px */
+    padding: 0.625em; /* Padding rond de inhoud */
     box-sizing: border-box; /* Houdt de padding binnen de breedte van de footer */
-    gap: 1.25em; /* 20px */
-    font-size: 1em; /* 16px */
+    gap: 1.25em; /* Ruimte tussen afbeelding en tekst */
+    font-size: 1em; /* Lettergrootte */
 }
 
 /* Stijl voor de laatste afbeelding in de footer */
@@ -260,28 +261,20 @@ footer img:last-of-type {
 }
 
 footer ul {
-    width: 100%;
+    width: 100%; /* Breedte van de footer-lijsten */
 }
 
 footer ul img {
-    width: 2em; /* 32px */
-    margin-left: 0.625em; /* 10px */
+    width: 2em; /* Breedte van de afbeeldingen in de footer */
+    padding-left: 0.625em; /* Padding links van de afbeeldingen */
 }
 
 footer section {
-    display: flex;
-    background-color: var(--letterkleur);
+    display: flex; /* Flexbox voor het uitlijnen van secties */
+    background-color: var(--letterkleur); /* Achtergrondkleur van de footer-sectie */
 }
 
 footer ul:nth-child(3) {
-   display: flex;
-   justify-content: center;
+    display: flex; /* Flexbox voor de derde lijst in de footer */
+    justify-content: center; /* Centreert de lijstitems */
 }
-
-/* Dark mode */
-
-
-   
-
-
-
