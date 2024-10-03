@@ -16,18 +16,18 @@
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --letterkleur: #fff; /* Lichtere letterkleur */
-        --h2kleur: #4a4a4a; /* Donkerdere kleur voor borders om h2 */
-        --mainachtergrondkleur: #121212; /* Donkere achtergrondkleur */
-        --tweedeachtergrondkleur: #333; /* Donkerdere tweede achtergrondkleur */
-        --wit: #1e1e1e; /* Donker wit voor donkere modus */
-        --grijs: #aaaaaa; /* Donkere grijs */
-        --zwart: #fff; /* Lichtere tekstkleur */
-        --headingeten: #c1a91f; /* Kleur voor headings eten in dark mode */
-        --achtergrondeten: #3e3e1a; /* Achtergrondkleur eten in dark mode */
-        --paars: #5e3b5e; /* Paarse kleur in dark mode */
-        --donkerpaars: #442944; /* Donkerpaarse kleur in dark mode */
-        --roze: #402020; /* Roze kleur in dark mode */
+        --letterkleur: #fff;
+        --h2kleur: #4a4a4a;
+        --mainachtergrondkleur: #121212;
+        --tweedeachtergrondkleur: #333;
+        --wit: #1e1e1e;
+        --grijs: #aaaaaa;
+        --zwart: #fff;
+        --headingeten: #c1a91f;
+        --achtergrondeten: #3e3e1a;
+        --paars: #5e3b5e;
+        --donkerpaars: #442944;
+        --roze: #402020;
     }
 }
 
@@ -36,71 +36,37 @@
     src: url(../fonts/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2) format("woff2");
 }
 
-
-section:nth-of-type(1) {
-    position: relative;
-    margin: 0.625em; 
-    overflow: hidden;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-section:nth-of-type(1) img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: opacity 0.3s ease;
-    margin-bottom: 1em; /* 16px */
-}
-
-
-section:nth-of-type(1) h3, 
-main section:nth-of-type(1) p {
-    position: absolute;
-    left: 1.25em; 
-    color: var(--wit);
-    z-index: 2; 
+/* Algemene stijlen */
+button, h2, h3 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 550;
+    text-transform: uppercase;
+    letter-spacing: 0.0625em;
+    font-size: 1em;
     margin: 0;
-    padding: 0.625em; 
     box-sizing: border-box;
-    font-size: 1em;
 }
 
-
-section:nth-of-type(1) h3 {
-    bottom: 3.75em; 
-    font-size: 1em; 
-    margin-bottom: 1.25em; 
-    color: var(--zwart);
+h2, h3 {
+    color: var(--letterkleur);
+    background-color: var(--tweedeachtergrondkleur);
+    padding: 0.0625em 0.125em;
+    display: inline-block;
+    width: fit-content;
 }
-
-main section:nth-of-type(1) p {
-    bottom: 1.25em; 
-    font-size: 1em;
-    text-align: left;
-    border-radius: 0.3125em; 
-}
+h2 { margin-left: 40%;}
 
 
-
-/* Knoppen stijl */
 button {
     border: 0.0625em solid var(--letterkleur);
     background-color: transparent;
     color: var(--letterkleur);
-    font: inherit;
     cursor: pointer;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.625em 1.25em; 
-    margin: 1.25em auto; 
-    text-align: center;
-    font-size: 1em;
+    padding: 0.625em 1.25em;
     transition: background-color 0.3s, color 0.3s;
-    font-weight: 550;
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
+    display: block;
+    margin: 1.25em auto;
     letter-spacing: 0.1875em;
 }
 
@@ -109,32 +75,64 @@ button:hover {
     border: none;
 }
 
-/* h2 en h3 styling */
-h2, h3 {
-    background-color: var(--tweedeachtergrondkleur);
-    color: var(--letterkleur);
-    padding: 0.0625em 0.125em; 
-    display: inline-block; 
-    text-align: center;
-    font-size: 1em;
-    font-family: rechts;
-    font-weight: 550;
-    letter-spacing: 0.0625em; 
-    text-transform: uppercase;
-    box-sizing: border-box; 
-    margin: 0; 
-    width: fit-content;
+p {
+    font-size: 1.2em;
+    font-family: sans;
+    text-align: left;
 }
 
-section:nth-of-type(1) a,
-section:nth-of-type(3) a {
+a {
+    text-decoration: none;
+    color: var(--zwart);
+}
+
+img {
+    width: 100%;
+    height: auto;
     display: block;
+    transition: opacity 0.3s ease;
 }
 
-h3 {
-    font-family: rechts;
+img:hover {
+    opacity: 0.8;
 }
 
+/* Specifieke sectiestijlen */
+section:nth-of-type(1) {
+    position: relative;
+    margin: 0.625em;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+section:nth-of-type(1) img {
+    margin-bottom: 1em;
+}
+
+section:nth-of-type(1) h3,
+main section:nth-of-type(1) p {
+    position: absolute;
+    left: 1.25em;
+    color: var(--wit);
+    z-index: 2;
+    padding: 0.625em;
+}
+
+section:nth-of-type(1) h3 {
+    bottom: 3.75em;
+    color: var(--zwart);
+    font-size: 1em;
+    margin-bottom: 1.25em;
+}
+
+main section:nth-of-type(1) p {
+    bottom: 1.25em;
+    text-align: left;
+    border-radius: 0.3125em;
+}
+
+/* Achtergrondkleuren voor specifieke secties */
 section:nth-of-type(2) {
     background-color: var(--roze);
 }
@@ -147,7 +145,8 @@ section:nth-of-type(6) {
     background-color: var(--achtergrondeten);
 }
 
-/* Grid styling voor afbeeldingen en tekst */
+/* Grid layout voor afbeeldingen en tekst in secties */
+/* Grid styling voor secties met afbeelding, h2, en tekst */
 section:nth-of-type(2) a,
 section:nth-of-type(3) a,
 section:nth-of-type(4) a,
@@ -157,9 +156,33 @@ section:nth-of-type(7) a {
     display: grid;
     grid-template-columns: 6em 1fr;
     grid-template-rows: max-content 1fr;
-    gap: 0 1em; 
-    padding: 1em; 
+    gap: 0 1em;
+    padding: 1em;
+    grid-template-areas:
+        "img h2"
+        "img text";
 }
+
+/* H2 positie boven de tekst */
+section a h2 {
+    grid-area: h2;
+    align-self: start; /* Zorgt ervoor dat de h2 bovenaan staat */
+}
+
+/* Afbeelding blijft links */
+section a img {
+    grid-area: img;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Tekst onder de h2 */
+section a p {
+    grid-area: text;
+    align-self: start;
+}
+
 
 section:nth-of-type(2) a h3,
 section:nth-of-type(3) a h3,
@@ -167,77 +190,11 @@ section:nth-of-type(4) a h3,
 section:nth-of-type(5) a h3,
 section:nth-of-type(6) a h3,
 section:nth-of-type(7) a h3 {
-    background-color: var(--tweedeachtergrondkleur);
-    color: var(--letterkleur);
-    padding: 0.25em 0.5em; 
-    font-size: 1em;
+    padding: 0.25em 0.5em;
 }
 
-section:nth-of-type(2) a img,
-section:nth-of-type(3) a img,
-section:nth-of-type(4) a img,
-section:nth-of-type(5) a img,
-section:nth-of-type(6) a img,
-section:nth-of-type(7) a img {
-    width: 100%;
-    height: auto;
-    display: block;
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-
-/* Algemene stijl voor tekst */
-p {
-    text-decoration: none;
-    font-size: 1.2em; 
-    font-family: sans;
-    text-align: left;
-}
-
-a {
-    text-decoration: none;
-    color: var(--zwart);
-}
-
-h2 {
-    margin-top: 1.875em; 
-    margin-left: 2.1875em; 
-}
-
-section:nth-of-type(4) h2 {
-    background-color: var(--paars);
-}
-
-section:nth-of-type(6) h2 {
-    background-color: var(--headingeten);
-}
-
-/* Hover effect voor afbeeldingen */
-img:hover {
-    opacity: 0.8; 
-    transition: opacity 0.3s ease; 
-}
-
-button {
-    display: block; 
-    margin: 1.25em auto; 
-    padding: 0.625em 1.25em; 
-    text-align: center;
-}
-
-h2 {
-    display: block; 
-    margin: 0 auto; 
-    text-align: center; 
-    width: fit-content; 
-}
-
-
-
-
-/* Voor middelgrote schermen */
-@media (min-width: 770px) { 
+/* Layout voor verschillende schermformaten */
+@media (min-width: 770px) {
     section:first-of-type ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -245,98 +202,55 @@ h2 {
         margin: 4em;
         list-style: none;
     }
-    /* Selecteer alleen de eerste afbeelding binnen de eerste sectie */
+
     section:nth-of-type(1) li:first-of-type {
         grid-column: 1 / 3;
     }
+
     section:nth-of-type(2) ul,
     section:nth-of-type(3) ul,
     section:nth-of-type(5) ul,
     section:nth-of-type(7) ul {
         display: grid;
-        grid-template-columns: 1fr 1fr; 
-        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
         list-style: none;
     }
-    section:nth-of-type(2) a,
-    section:nth-of-type(3) a,
-    section:nth-of-type(5) a,
-    section:nth-of-type(7) a {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    section:nth-of-type(4) li:first-of-type article a,
-    section:nth-of-type(6) li:first-of-type article a{
-        display: grid;
-        grid-template-columns: 1fr;
-
-    }
-    
-
-    
-    
-
 }
 
-    @media (min-width: 1000px) { 
-        section:first-of-type ul {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            grid-template-rows: repeat(2, 1fr);
-            gap: 0.625em; 
-            padding: 0.3125em; 
-            list-style: none;
-        }
-        
-        /* Eerste afbeelding in de eerste sectie */
-        section:nth-of-type(1) li:first-of-type {
-            grid-column: 1; 
-            grid-row: 1 / span 2;
-        }
-    
-        section ul img {
-            width: 100%;
-            height: 100%;
-            object-fit:fill;
-        }
+@media (min-width: 1000px) {
+    section:first-of-type ul {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 0.625em;
+        padding: 0.3125em;
+        list-style: none;
+    }
+
+    section:nth-of-type(1) li:first-of-type {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    section ul img {
+        object-fit: fill;
+    }
+
     section:nth-of-type(2) ul,
     section:nth-of-type(3) ul,
     section:nth-of-type(5) ul,
     section:nth-of-type(7) ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr ; 
-        grid-template-rows: auto auto;
-        list-style: none;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
-    section:nth-of-type(4) ul{
-        display: grid;
+    section:nth-of-type(4) ul,
+    section:nth-of-type(6) ul {
         grid-template-columns: 1fr 1fr;
-        list-style: none;
-
-    }
-    section:nth-of-type(4) ul li:first-of-type {
-        grid-column: 1/2;
-        grid-row: 1/5;
-        
     }
 
-    section:nth-of-type(6) ul{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        list-style: none;
-
-    }
+    section:nth-of-type(4) ul li:first-of-type,
     section:nth-of-type(6) ul li:first-of-type {
-        grid-column: 1/2;
-        grid-row: 1/5;
-        
+        grid-column: 1 / 2;
+        grid-row: 1 / 5;
     }
-
-    h3 { margin-top: 1em;}
-    }
-    
-
-
-
+}

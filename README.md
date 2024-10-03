@@ -56,7 +56,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Het is makkelijk om met voice chat te navigeren over de website via de computer, alleen via de telefoon als het scherm kleiner word is het wat lastiger, zinnen worden dan in zijn geheel niet afgemaakt, wat ook enorm belangrijk is is de sections zodat er goed te horen is wanneer er een nieuw deel begint op de website
+  "Het is makkelijk om met de voice chat de website te gebruiken op de computer, maar op de telefoon, als het scherm kleiner is, wordt het moeilijker. Zinnen worden soms niet helemaal voorgelezen, en dat is een probleem. Ook is het heel belangrijk dat je goed kan horen wanneer er een nieuw deel (een nieuwe sectie) begint op de website, anders raakt de voice chat in de war. Er zijn ook andere dingen die mis kunnen gaan: soms springt de voice chat per ongeluk naar een ander deel van de pagina, of leest het niet altijd alles in de juiste volgorde voor. Dat kan verwarrend zijn voor mensen die de website willen begrijpen. Daarom is het belangrijk om de voice chat te verbeteren, vooral voor mobiele telefoons en kleine schermen!"
  
 
 </details>
@@ -89,7 +89,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  Ik had bij het coderen van mijn html enkele problemen, ik wist bijvoorbeeld niet wt mijn H1 was aangezien die niet heel duidelijk was, ook had ik in de eerste instantie alles alleen in een h2 h3 en een p, toen leerde ik van een klasgenoot dat het beter is om alles te listen. Ik heb toen geleerd dat je kan referen naar dat het een artikel is door de tag <article> te gebruiken, nadat ik dat heb geleerd is mijn html code veel meer overzichtelijk geworden. Het enige wat ik nog steeds niet weet is wat ik als H1 moet gebruiken aangezien je voor een goede code wel een H1 nodig hebt. 
+Tijdens het coderen van mijn HTML kwam ik een paar problemen tegen. Een van de grootste issues was dat ik niet wist wat mijn H1 moest zijn, omdat het niet meteen duidelijk was welk onderdeel het belangrijkste was. In het begin had ik alles alleen ingedeeld met H2-, H3-tags en paragrafen (p-tags). Toen vertelde een klasgenoot me dat het beter is om de content in lijsten te plaatsen voor meer structuur. 
+
+Daarnaast leerde ik ook dat je met de `<article>`-tag kunt aangeven dat een bepaald deel van de content een artikel is, wat helpt om de HTML overzichtelijker te maken. Sindsdien is mijn HTML-code veel netter en beter georganiseerd.
+
+Het enige waar ik nog steeds moeite mee heb, is bepalen wat ik als H1 moet gebruiken. Ik weet dat een goede HTML-structuur een H1 nodig heeft, maar ik ben er nog niet zeker van wat de beste keuze is voor de hoofdheading op mijn pagina.
 
 
   ### Agenda voor meeting
@@ -123,7 +127,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  De HTML ging redelijk goed, ik had alleen moeite met simpele dingen zoals de border om de text even groot maken als de text en het logo moet ook bovenin het hamburgermenu staan, ik heb hier enorm lang mee lopen puzzelen maar ik kwam er echt niet uit. 
+  De HTML ging redelijk goed, maar ik had moeite met enkele simpele dingen, zoals het zorgen dat de border rondom de tekst even groot was als de tekst zelf. Ook had ik problemen met het plaatsen van het logo bovenin het hamburgermenu. Dit gaf me echt een flink aantal hoofdbrekens en ik heb er lange tijd mee zitten puzzelen, maar ik kwam er gewoon niet uit. Het was frustrerend, omdat het leek alsof alles klopte, behalve deze details.
   ### Agenda voor meeting
 vragen:
 - Hoe krijg ik de blokken alleen om de text heen 
@@ -150,9 +154,29 @@ vragen:
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  **Bevindingen uit de test:**
 
-  Door de sections die ik in de website heb gemaakt is het makkelijker om hier doorheen te navigeren, op de originele site skipte hij vaak headings, ik heb geprobeerd dit zoveel mogelijk niet te doen, ik heb dus wel een visually hidden moeten gebruiken omdat ik anders een heading zou missen. Ik heb ook een dark modus gemaakt voor de website. 
+1. **Gebruik van `<section>`-tags:**
+   - **Oorspronkelijke situatie:** De oude website had geen duidelijke indeling, waardoor het lastig was om door de inhoud te navigeren.
+   - **Verbetering:** Door het gebruik van `<section>`-tags heb ik de inhoud in duidelijke delen opgesplitst, waardoor het makkelijker is voor gebruikers en zoekmachines om de pagina te begrijpen.
+
+2. **Betere heading-structuur:**
+   - **Oorspronkelijke situatie:** De headings waren niet goed gestructureerd, waardoor belangrijke koppen vaak werden overgeslagen door screen readers.
+   - **Verbetering:** Ik heb de headings goed geordend (zoals H1, H2, etc.) en gebruik gemaakt van `visually hidden` voor koppen die wel toegankelijk moesten zijn, maar niet zichtbaar.
+
+
+3. **Dark mode:**
+   - **Oorspronkelijke situatie:** De website had geen donkere modus, wat ongemakkelijk kon zijn voor gebruikers die gevoelig zijn voor fel licht of 's nachts browsen.
+   - **Verbetering:** Ik heb een dark mode toegevoegd, zodat gebruikers kunnen kiezen tussen een lichte en een donkere weergave.
+   
+
+**Samenvatting van verbeteringen:**
+- Duidelijke secties voor betere navigatie.
+- Betere heading-structuur met `visually hidden` voor toegankelijkheid.
+- Toevoeging van dark mode voor gebruikersgemak.
+
+
+Deze verbeteringen maakten de website gebruiksvriendelijker, toegankelijker en visueel aantrekkelijker. 
 
 </details>
 
@@ -166,7 +190,9 @@ vragen:
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  De dark modus heb ik gemaakt dit ging redelijk goed, ik heb ook de website volledig rsponsive gemaakt hier ben ik enorm trots op een paar enkele dingen werkte niet mee, ik heb erg lang lopen puzzelen met de goede elementen te selecteren ook was ik een beetje vergeten hoe ik grid moest toepassen maar ik had hierover al een heldere uitleg gekregen van 1 van mijn klasgenoten. 
+ Ik heb de dark mode toegevoegd, en dit ging redelijk goed. Daarnaast ben ik erg trots dat ik de website volledig responsive heb gemaakt. Het was wel een uitdaging, omdat sommige dingen niet helemaal mee werkten zoals ik had verwacht. Ik heb echt lang zitten puzzelen om de juiste elementen te selecteren. Ook was ik even vergeten hoe ik CSS Grid moest toepassen, maar gelukkig had ik daar al een heldere uitleg over gekregen van een van mijn klasgenoten.
+
+
 
   ### Agenda voor meeting
 Vragen:
@@ -196,12 +222,26 @@ Vragen:
 <details>
   <summary>uitwerken voor eindgesprek</summary>
 
-  ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitkomst opdracht 1">
+## WCAG checklist:
+<img src="readme-images/test1.PNG" width="375px" alt="top">
+   <img src="readme-images/test2.PNG" width="375px" alt="top">
+    <img src="readme-images/test3.PNG.png" width="375px" alt="top">
+     <img src="readme-images/test4.PNG.png" width="375px" alt="top">
+     Uit de checklist blijkt dat ik de content van de website heb verbeterd. Overal waar het nodig was, heb ik een duidelijke beschrijving toegevoegd. In de HTML-code van Girlscene zaten veel errors, waarvan ik de meeste heb opgelost in mijn eigen code. Zoals ik eerder al noemde, was er een slechte structuur van de h1, h2 en h3 elementen in de Girlscene-code. Dit heb ik in mijn eigen code verbeterd, zodat alles nu beter georganiseerd is. Ook heb ik meer <li>-elementen gebruikt dan in de Girlscene-code, wat zorgt voor een nettere en gestructureerdere lijst. Deze dingen zijn de meest opvallende verbeteringen die ik heb aangebracht, volgens de checklist.
+
 
 
   ### Dit ging goed/Heb ik geleerd: 
- Ik heb geleerde hoe je een website responsive kan maken, ik heb geleerd dat je op een website niet per se divs classes of ids nodig hebt maar heel makkelijk op andere manieren deze kan aanspreken in je css, wat mij enorm heeft geholpen tijdens het coderen is het inspecten en elementen uit en aan zetten om het probleem te achterhalen dit had ik in het eerste jaar ook enorm goed kunnen gebruiken. Ik heb ook geleerd hoe ik een grid kan gebruiken en wat nou eigenlijk flex box is wat heel handig kan zijn voor het maken van een website in de toekomst.
+ Ik heb geleerd hoe je een website kunt maken die goed werkt op allerlei apparaten, zoals je telefoon of computer. Dat heet responsive maken. Ook ontdekte ik dat je niet altijd hele ingewikkelde dingen zoals divs, classes of IDs nodig hebt in je code. Je kunt veel makkelijker andere manieren gebruiken om dingen te veranderen in je website. Dit was best wel handig, want zo werd alles veel eenvoudiger en makkelijker!
+
+ Wat me echt geholpen heeft, is het 'inspecteren' van de website. Ik kon gewoon op de website klikken en kijken hoe alles werkt. Dan kon ik dingen aan of uitzetten om te zien waar het mis ging. Dit was super handig, en als ik dit al had geweten in het eerste jaar, had het me een stuk tijd bespaard!
+
+ Naast dit heb ik ook geleerd hoe je een grid kunt gebruiken. Een grid is een soort structuur die je helpt om dingen op je website netjes op een rijtje te zetten, zoals vakjes of kolommen. In het begin was dit voor mij een beetje verwarrend, omdat er veel verschillende manieren zijn om grids te maken en ze werken niet altijd op dezelfde manier in elke situatie. Maar na wat oefenen begreep ik hoe ik het goed kon gebruiken. Nu kan ik makkelijk dingen organiseren en het zorgt ervoor dat de website er netjes uitziet, zelfs als je hem op een klein scherm bekijkt.
+
+Ook heb ik Flexbox geleerd, en dat was ook heel handig! Flexbox is een andere manier om dingen op je website te zetten, maar dan op een flexibele manier. Stel je voor dat je een rij hebt met knoppen die naast elkaar staan. Met Flexbox kun je die knoppen snel en makkelijk gelijkmatig over de pagina verspreiden, zonder dat je ze allemaal handmatig moet positioneren. Dit maakt het veel eenvoudiger om de layout van je website aan te passen, vooral als je wilt dat dingen goed uitlijnen en flexibel zijn, zonder dat ze vervormd raken als de pagina kleiner of groter wordt.
+
+Al deze nieuwe dingen die ik heb geleerd, zoals het responsief maken van websites, het gebruik van Grid en Flexbox, hebben mijn vaardigheden echt verbeterd. Het heeft me geholpen om websites te maken die goed werken op alle apparaten en die makkelijk te onderhouden zijn. Ik ben nu veel zelfverzekerder in het maken van websites en weet dat ik deze tools vaak zal gebruiken voor toekomstige projecten.
+
 
   <img src="readme-images/een.png" width="375px" alt="top">
    <img src="readme-images/twee.png" width="375px" alt="top">
@@ -209,7 +249,13 @@ Vragen:
 
 
   ### Dit was lastig/Is niet gelukt:
-  Het is me niet gelukt om de footer volledig responsive te maken de footer was uiteindelijk uberhaupt best een groot probleem bij het maken ik selecteerde vaak niet het goede onderdeel, ook hoort er in de navbar een zoekbalk te zijn maar die zit er ook niet bij in. Het is me ook niet gelukt om het hamburgermenu te veranderen naar daadwerkelijk 3 strepen in plaats van een image, ik had helaas geen tijd meer om hier naar te kijken ik had dit ook graag nog willen leren.
+ Hoewel ik veel heb geleerd en veel dingen goed heb kunnen maken, zijn er een paar onderdelen die niet helemaal gelukt zijn. De footer was bijvoorbeeld best een groot probleem. Het was moeilijk om hem goed responsive te maken. Ik selecteerde vaak niet het juiste onderdeel, waardoor ik veel tijd kwijt was. Uiteindelijk werkt de footer wel, maar het is niet helemaal zoals ik het had gewild. Dit had ik graag beter gedaan als ik meer tijd had gehad.
+
+Ook is de navbar niet helemaal compleet. Er hoort een zoekbalk in de navbar te zitten, maar die heb ik niet kunnen toevoegen. Dit was iets wat ik wel wilde doen, maar door tijdgebrek is het er niet van gekomen. In de toekomst wil ik dit zeker wel toevoegen.
+
+Verder had ik problemen met het hamburgermenu. Ik wilde het eigenlijk veranderen naar de drie streepjes (zoals je vaak ziet in apps en websites), in plaats van een afbeelding, maar dit is me niet gelukt. Ik had gewoon niet genoeg tijd om hier verder naar te kijken. Dit zou ik graag nog willen leren, want het is een veelgebruikte techniek.
+
+Ik liep er ook tegen aan dat op de tweede pagina een instagram post zat, deze code kon je vanuit instagram kppieren maar hier zitten enorm veel fouten in waardoor je bij de controle heel veel errors krijgt, ik had geprobeerd om de css en de html v an elkaar te scheiden maar zonder geluk, ik heb daarom uiteindelijk besloten om de instagram post te veranderen naar een foto.
 
   <img src="readme-images/vier.png" width="375px" alt="bummer">
    <img src="readme-images/vijf.png" width="375px" alt="bummer">

@@ -1,4 +1,3 @@
-
 :root {
     --letterkleur: #000; /* Letterkleur */
     --h2kleur: #efbebe; /* Kleur voor borders om h2 */
@@ -17,26 +16,22 @@
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --letterkleur: #fff; /* Lichtere tekstkleur */
-        --h2kleur: #9b4d4d; /* Donkere tint voor borders om h2 */
-        --mainachtergrondkleur: #1a1a1a; /* Donkere achtergrondkleur */
-        --tweedeachtergrondkleur: #333; /* Tweede donkere achtergrondkleur */
-        --wit: #333; /* Donkerdere kleur voor lichte vlakken */
-        --grijs: #c0c0c0; /* Lichtere grijstint voor tekst */
-        --zwart: #fff; /* Lichtere tekstkleur */
-        --headingeten: #d4b55f; /* Aangepaste donkermode kleur */
-        --achtergrondeten: #4b4514; /* Donkere achtergrond voor eten-sectie */
+        --letterkleur: #fff;
+        --h2kleur: #9b4d4d;
+        --mainachtergrondkleur: #1a1a1a;
+        --tweedeachtergrondkleur: #333;
+        --wit: #333;
+        --grijs: #c0c0c0;
+        --zwart: #fff;
+        --headingeten: #d4b55f;
+        --achtergrondeten: #4b4514;
         --paars: #5c4a5c;
         --donkerpaars: #402840;
         --roze: #7e4e4e;
     }
 
-    body {
+    body, h2, h3, p, a, button {
         background-color: var(--mainachtergrondkleur);
-        color: var(--letterkleur);
-    }
-
-    h2, h3, p, a, button {
         color: var(--letterkleur);
     }
 
@@ -50,67 +45,29 @@
     }
 
     button:hover {
-        background-color: #7b2d2d; 
+        background-color: #7b2d2d;
     }
 }
-
-
 
 @font-face {
     font-family: rechts;
     src: url(../fonts/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2) format("woff2");
 }
 
-section:nth-of-type(2) a {
-    display: grid;
-    grid-template-columns: 6em 1fr;
-    grid-template-rows: max-content 1fr;
-    gap: 0 1em;
-    padding: 1em;
-}
-
-h3  {
-    background-color: var(--tweedeachtergrondkleur);
+/* Algemeen */
+body {
+    background-color: var(--mainachtergrondkleur);
     color: var(--letterkleur);
-    padding: 4px 8px ;
-    font-size: 1em;
-    width: fit-content;
-    font-family: rechts;  
 }
 
-section:nth-of-type(2) a img {
-    width: 100%;
-    height: auto;
-    display: block;
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-main section:nth-of-type(1) p {
-    color: var(--zwart);
-}
-
-
-section:nth-of-type(2) h2 {
-    background-color: var(--tweedeachtergrondkleur);
+h2, h3, p, a, button {
     color: var(--letterkleur);
-    padding: 4px 8px ;
-    font-size: 1em;
-    text-transform: uppercase;
-    font-family: rechts;
-    margin-top: 3em;
-    width: fit-content;
 }
 
-
-p {
-    text-decoration: none;
-    font-size: 1rem;
+p, a {
     font-family: sans;
-text-align: left;
-}
-
-a {
+    font-size: 1rem;
+    text-align: left;
     text-decoration: none;
     color: var(--zwart);
 }
@@ -121,138 +78,127 @@ button {
     color: var(--letterkleur);
     font: inherit;
     cursor: pointer;
-    display: block; 
+    display: block;
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
-    margin: 2em auto; 
+    margin: 2em auto;
     text-align: center;
     font-size: 1em;
-    transition: background-color 0.3s, color 0.3s;
     font-weight: 550;
-    font-family: sans;
     text-transform: uppercase;
     letter-spacing: 0.2em;
+    transition: background-color 0.3s, color 0.3s;
 }
-
 
 button:hover {
-    opacity: 0.8; 
-    transition: opacity 0.3s ease; 
-    
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
 }
 
-h3 { 
+h3 {
     margin-top: 2em;
-    
-}
-
-section:first-of-type p:first-of-type {
-    font-weight: bold;
-}
-
-    
-section:nth-of-type(1) p,
-section:nth-of-type(3) p
-{
-    margin-left: 1.5em;
-    margin-top: 0.5em;
-    line-height: 1.5em;
-    margin-bottom: 1em;
-
-   
-}
-
-
- section:nth-of-type(3) h2 {
-    /* Je stijlen hier */
-    margin-left: 1.5em;
-    margin-top: 1em;
-    line-height: 1.5em;
-}
-
-section:nth-of-type(1) :first-child h2 {
-    line-height: 2em;
-    font-size: 2.5em;
-}
-
-
-section:nth-of-type(1) h3,
-section:nth-of-type(2) h3,
-section:nth-of-type(3) h3 {
+    background-color: var(--h2kleur);
+    padding: 4px 8px;
+    font-size: 1em;
+    width: fit-content;
+    font-family: rechts;
     text-transform: uppercase;
-    
-}
-
-section:nth-of-type(2) h2{
-    display: block; 
-    margin: 0 auto; 
-    text-align: center; 
-    width: fit-content; 
 }
 
 h4 {
     color: var(--grijs);
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   text-transform: uppercase;
-   font-size: 0.7em;
-  margin-bottom: 3em;
-  margin-left: 3em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    margin-bottom: 3em;
+    margin-left: 3em;
 }
 
-main section:first-of-type {
+h2 {
+    padding: 4px 8px;
+    font-size: 1em;
+    font-family: rechts;
+    width: fit-content;
+}
+
+section {
+    background-color: var(--mainachtergrondkleur);
+    margin-left: 1.5em;
+    margin-top: 0.5em;
+    line-height: 1.5em;
+}
+
+section:nth-of-type(2) h2 {
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--h2kleur);
+}
+
+section:nth-of-type(2) a {
+    display: grid;
+    grid-template-columns: 6em 1fr;
+    grid-template-rows: max-content 1fr;
+    gap: 0 1em;
+    padding: 1em;
+}
+
+section:nth-of-type(2) a img {
+    width: 100%;
+    height: auto;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+section:first-of-type h2 {
+    line-height: 2em;
+    font-size: 2.5em;
+}
+
+section:nth-of-type(1) p:first-of-type {
+    font-weight: bold;
+}
+
+main section:first-of-type, main section:nth-of-type(3) {
     display: flex;
     flex-direction: column;
-  justify-content: center; 
- padding: 2em 5em;
+    justify-content: center;
+    padding: 2em 5em;
 }
 
-main section:nth-of-type(3) {
-    display: flex;
-    flex-direction: column;
-  justify-content: center; 
- padding: 2em 5em;
-}
-
-
-
-
-
-
-@media (min-width: 770px) { 
-    section:nth-of-type(2) ul  {
+/* Middelgrote schermen */
+@media (min-width: 770px) {
+    section:nth-of-type(2) ul {
         display: grid;
-        grid-template-columns: 1fr 1fr; 
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
         list-style: none;
-    }
-    section:nth-of-type(2) a {
-        display: grid;
-        grid-template-columns: 1fr;
     }
 
     section:nth-of-type(1) img:nth-of-type(2) {
         width: 50%;
-        }
-        main {
-            padding: 0 6em;
-        }
+    }
+
+    main {
+        padding: 0 6em;
+    }
 }
 
-@media (min-width: 1000px){
-    section:nth-of-type(2) ul
-    {
+/* Grote schermen */
+@media (min-width: 1000px) {
+    section:nth-of-type(2) ul {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr ; 
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto auto;
         list-style: none;
-}
-section:nth-of-type(1) img:nth-of-type(2) {
-    width: 30%;
     }
+
+    section:nth-of-type(1) img:nth-of-type(2) {
+        width: 30%;
+    }
+
     main {
         padding: 0 10em;
     }
-
-
 }
